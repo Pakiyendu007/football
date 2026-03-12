@@ -29,6 +29,84 @@ namespace CSGenio.business
             DataMatrix dm;
             sp.openConnection();
 
+            /* --- PNLCOACHS --- */
+            dm = sp.Execute(
+                new SelectQuery()
+                .Select(CSGenioAcoachs.FldCodcoachs)
+                .From(CSGenioAcoachs.AreaCOACHS)
+                .Where(CriteriaSet.And().In(CSGenioAcoachs.FldZzstate, zzstateToRemove))
+                );
+
+            for (int i = 0; i < dm.NumRows; i++)
+            {
+                CSGenioAcoachs model = new CSGenioAcoachs(user);
+                model.ValCodcoachs = dm.GetKey(i, 0);
+
+                try
+                {
+                    model.delete(sp);
+                }
+                //Not every exception should be allowed to continue record deletion, only business exceptions need to be caught and allow to deletion continue.
+                //If there are other types of exceptions, such as database connection problems, for example, execution should be stopped immediately
+                catch(BusinessException ex)
+                {
+                    Log.Error((ex.UserMessage != null) ? ex.UserMessage : ex.Message);
+                }
+            }
+                
+
+            /* --- PNLGOALS --- */
+            dm = sp.Execute(
+                new SelectQuery()
+                .Select(CSGenioAgoals.FldCodgoals)
+                .From(CSGenioAgoals.AreaGOALS)
+                .Where(CriteriaSet.And().In(CSGenioAgoals.FldZzstate, zzstateToRemove))
+                );
+
+            for (int i = 0; i < dm.NumRows; i++)
+            {
+                CSGenioAgoals model = new CSGenioAgoals(user);
+                model.ValCodgoals = dm.GetKey(i, 0);
+
+                try
+                {
+                    model.delete(sp);
+                }
+                //Not every exception should be allowed to continue record deletion, only business exceptions need to be caught and allow to deletion continue.
+                //If there are other types of exceptions, such as database connection problems, for example, execution should be stopped immediately
+                catch(BusinessException ex)
+                {
+                    Log.Error((ex.UserMessage != null) ? ex.UserMessage : ex.Message);
+                }
+            }
+                
+
+            /* --- PNLMATCHES --- */
+            dm = sp.Execute(
+                new SelectQuery()
+                .Select(CSGenioAmatches.FldCodmatches)
+                .From(CSGenioAmatches.AreaMATCHES)
+                .Where(CriteriaSet.And().In(CSGenioAmatches.FldZzstate, zzstateToRemove))
+                );
+
+            for (int i = 0; i < dm.NumRows; i++)
+            {
+                CSGenioAmatches model = new CSGenioAmatches(user);
+                model.ValCodmatches = dm.GetKey(i, 0);
+
+                try
+                {
+                    model.delete(sp);
+                }
+                //Not every exception should be allowed to continue record deletion, only business exceptions need to be caught and allow to deletion continue.
+                //If there are other types of exceptions, such as database connection problems, for example, execution should be stopped immediately
+                catch(BusinessException ex)
+                {
+                    Log.Error((ex.UserMessage != null) ? ex.UserMessage : ex.Message);
+                }
+            }
+                
+
             /* --- PNLMEM --- */
             dm = sp.Execute(
                 new SelectQuery()
@@ -55,6 +133,32 @@ namespace CSGenio.business
             }
                 
 
+            /* --- PNLPLAYERS --- */
+            dm = sp.Execute(
+                new SelectQuery()
+                .Select(CSGenioAplayers.FldCodplayers)
+                .From(CSGenioAplayers.AreaPLAYERS)
+                .Where(CriteriaSet.And().In(CSGenioAplayers.FldZzstate, zzstateToRemove))
+                );
+
+            for (int i = 0; i < dm.NumRows; i++)
+            {
+                CSGenioAplayers model = new CSGenioAplayers(user);
+                model.ValCodplayers = dm.GetKey(i, 0);
+
+                try
+                {
+                    model.delete(sp);
+                }
+                //Not every exception should be allowed to continue record deletion, only business exceptions need to be caught and allow to deletion continue.
+                //If there are other types of exceptions, such as database connection problems, for example, execution should be stopped immediately
+                catch(BusinessException ex)
+                {
+                    Log.Error((ex.UserMessage != null) ? ex.UserMessage : ex.Message);
+                }
+            }
+                
+
             /* --- UserLogin --- */
             dm = sp.Execute(
                 new SelectQuery()
@@ -67,6 +171,32 @@ namespace CSGenio.business
             {
                 CSGenioApsw model = new CSGenioApsw(user);
                 model.ValCodpsw = dm.GetKey(i, 0);
+
+                try
+                {
+                    model.delete(sp);
+                }
+                //Not every exception should be allowed to continue record deletion, only business exceptions need to be caught and allow to deletion continue.
+                //If there are other types of exceptions, such as database connection problems, for example, execution should be stopped immediately
+                catch(BusinessException ex)
+                {
+                    Log.Error((ex.UserMessage != null) ? ex.UserMessage : ex.Message);
+                }
+            }
+                
+
+            /* --- PNLREFEREES --- */
+            dm = sp.Execute(
+                new SelectQuery()
+                .Select(CSGenioAreferees.FldCodreferees)
+                .From(CSGenioAreferees.AreaREFEREES)
+                .Where(CriteriaSet.And().In(CSGenioAreferees.FldZzstate, zzstateToRemove))
+                );
+
+            for (int i = 0; i < dm.NumRows; i++)
+            {
+                CSGenioAreferees model = new CSGenioAreferees(user);
+                model.ValCodreferees = dm.GetKey(i, 0);
 
                 try
                 {
@@ -145,6 +275,58 @@ namespace CSGenio.business
             {
                 CSGenioAs_nm model = new CSGenioAs_nm(user);
                 model.ValCodmesgs = dm.GetKey(i, 0);
+
+                try
+                {
+                    model.delete(sp);
+                }
+                //Not every exception should be allowed to continue record deletion, only business exceptions need to be caught and allow to deletion continue.
+                //If there are other types of exceptions, such as database connection problems, for example, execution should be stopped immediately
+                catch(BusinessException ex)
+                {
+                    Log.Error((ex.UserMessage != null) ? ex.UserMessage : ex.Message);
+                }
+            }
+                
+
+            /* --- PNLSTADIUMS --- */
+            dm = sp.Execute(
+                new SelectQuery()
+                .Select(CSGenioAstadiums.FldCodstadiums)
+                .From(CSGenioAstadiums.AreaSTADIUMS)
+                .Where(CriteriaSet.And().In(CSGenioAstadiums.FldZzstate, zzstateToRemove))
+                );
+
+            for (int i = 0; i < dm.NumRows; i++)
+            {
+                CSGenioAstadiums model = new CSGenioAstadiums(user);
+                model.ValCodstadiums = dm.GetKey(i, 0);
+
+                try
+                {
+                    model.delete(sp);
+                }
+                //Not every exception should be allowed to continue record deletion, only business exceptions need to be caught and allow to deletion continue.
+                //If there are other types of exceptions, such as database connection problems, for example, execution should be stopped immediately
+                catch(BusinessException ex)
+                {
+                    Log.Error((ex.UserMessage != null) ? ex.UserMessage : ex.Message);
+                }
+            }
+                
+
+            /* --- PNLTEAM --- */
+            dm = sp.Execute(
+                new SelectQuery()
+                .Select(CSGenioAteam.FldCodteam)
+                .From(CSGenioAteam.AreaTEAM)
+                .Where(CriteriaSet.And().In(CSGenioAteam.FldZzstate, zzstateToRemove))
+                );
+
+            for (int i = 0; i < dm.NumRows; i++)
+            {
+                CSGenioAteam model = new CSGenioAteam(user);
+                model.ValCodteam = dm.GetKey(i, 0);
 
                 try
                 {

@@ -108,11 +108,29 @@ namespace GenioMVC.Resources
 		}
 
 		/// <summary>
+		///   Looks up a localized string similar to "coaches"
+		/// </summary>
+		public static string COACHES16077 {
+			get {
+				return ResourceManager.GetString("COACHES16077", resourceCulture);
+			}
+		}
+
+		/// <summary>
 		///   Looks up a localized string similar to "Não responde"
 		/// </summary>
 		public static string NAO_RESPONDE33275 {
 			get {
 				return ResourceManager.GetString("NAO_RESPONDE33275", resourceCulture);
+			}
+		}
+
+		/// <summary>
+		///   Looks up a localized string similar to "referees"
+		/// </summary>
+		public static string REFEREES03665 {
+			get {
+				return ResourceManager.GetString("REFEREES03665", resourceCulture);
 			}
 		}
 
@@ -149,6 +167,24 @@ namespace GenioMVC.Resources
 		public static string NAME31974 {
 			get {
 				return ResourceManager.GetString("NAME31974", resourceCulture);
+			}
+		}
+
+		/// <summary>
+		///   Looks up a localized string similar to "team"
+		/// </summary>
+		public static string TEAM57329 {
+			get {
+				return ResourceManager.GetString("TEAM57329", resourceCulture);
+			}
+		}
+
+		/// <summary>
+		///   Looks up a localized string similar to "stadiums"
+		/// </summary>
+		public static string STADIUMS62616 {
+			get {
+				return ResourceManager.GetString("STADIUMS62616", resourceCulture);
 			}
 		}
 
@@ -504,6 +540,15 @@ namespace GenioMVC.Resources
 		}
 
 		/// <summary>
+		///   Looks up a localized string similar to "matches"
+		/// </summary>
+		public static string MATCHES56954 {
+			get {
+				return ResourceManager.GetString("MATCHES56954", resourceCulture);
+			}
+		}
+
+		/// <summary>
 		///   Looks up a localized string similar to "Notification Message"
 		/// </summary>
 		public static string NOTIFICATION_MESSAGE31108 {
@@ -828,6 +873,15 @@ namespace GenioMVC.Resources
 		}
 
 		/// <summary>
+		///   Looks up a localized string similar to "goals"
+		/// </summary>
+		public static string GOALS59839 {
+			get {
+				return ResourceManager.GetString("GOALS59839", resourceCulture);
+			}
+		}
+
+		/// <summary>
 		///   Looks up a localized string similar to "Bcc"
 		/// </summary>
 		public static string BCC22049 {
@@ -1013,6 +1067,15 @@ namespace GenioMVC.Resources
 		public static string TERMINADO46276 {
 			get {
 				return ResourceManager.GetString("TERMINADO46276", resourceCulture);
+			}
+		}
+
+		/// <summary>
+		///   Looks up a localized string similar to "players"
+		/// </summary>
+		public static string PLAYERS01799 {
+			get {
+				return ResourceManager.GetString("PLAYERS01799", resourceCulture);
 			}
 		}
 

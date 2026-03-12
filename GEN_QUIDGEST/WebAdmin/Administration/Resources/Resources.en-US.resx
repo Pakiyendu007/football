@@ -132,8 +132,14 @@
   <data name="USER_AUTHORIZATION53599" xml:space="preserve">
     <value>User Authorization</value>
   </data>
+  <data name="COACHES16077" xml:space="preserve">
+    <value>coaches</value>
+  </data>
   <data name="NAO_RESPONDE33275" xml:space="preserve">
     <value>Não responde</value>
+  </data>
+  <data name="REFEREES03665" xml:space="preserve">
+    <value>referees</value>
   </data>
   <data name="MANUAL_DESTINATION21892" xml:space="preserve">
     <value>Manual destination</value>
@@ -146,6 +152,12 @@
   </data>
   <data name="NAME31974" xml:space="preserve">
     <value>Name</value>
+  </data>
+  <data name="TEAM57329" xml:space="preserve">
+    <value>team</value>
+  </data>
+  <data name="STADIUMS62616" xml:space="preserve">
+    <value>stadiums</value>
   </data>
   <data name="PROCESS_ID11161" xml:space="preserve">
     <value>Process ID</value>
@@ -264,6 +276,9 @@
   <data name="MODO_DE_PROCESSAMENT14469" xml:space="preserve">
     <value>Modo de processamento</value>
   </data>
+  <data name="MATCHES56954" xml:space="preserve">
+    <value>matches</value>
+  </data>
   <data name="NOTIFICATION_MESSAGE31108" xml:space="preserve">
     <value>Notification Message</value>
   </data>
@@ -372,6 +387,9 @@
   <data name="MODOS_DE_PROCESSAMEN07602" xml:space="preserve">
     <value>Modos de processamento</value>
   </data>
+  <data name="GOALS59839" xml:space="preserve">
+    <value>goals</value>
+  </data>
   <data name="BCC22049" xml:space="preserve">
     <value>Bcc</value>
   </data>
@@ -434,6 +452,9 @@
   </data>
   <data name="TERMINADO46276" xml:space="preserve">
     <value>Terminado</value>
+  </data>
+  <data name="PLAYERS01799" xml:space="preserve">
+    <value>players</value>
   </data>
   <data name="DESAUTORIZADO34584" xml:space="preserve">
     <value>Desautorizado</value>

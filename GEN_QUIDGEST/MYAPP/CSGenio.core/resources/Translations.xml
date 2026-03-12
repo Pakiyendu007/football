@@ -15,8 +15,14 @@
   <msg id="User Authorization" code="USER_AUTHORIZATION53599">
     <ENUS>User Authorization</ENUS>
   </msg>
+  <msg id="coaches" code="COACHES16077">
+    <ENUS>coaches</ENUS>
+  </msg>
   <msg id="Não responde" code="NAO_RESPONDE33275">
     <ENUS>Não responde</ENUS>
+  </msg>
+  <msg id="referees" code="REFEREES03665">
+    <ENUS>referees</ENUS>
   </msg>
   <msg id="Manual destination" code="MANUAL_DESTINATION21892">
     <ENUS>Manual destination</ENUS>
@@ -29,6 +35,12 @@
   </msg>
   <msg id="Name" code="NAME31974">
     <ENUS>Name</ENUS>
+  </msg>
+  <msg id="team" code="TEAM57329">
+    <ENUS>team</ENUS>
+  </msg>
+  <msg id="stadiums" code="STADIUMS62616">
+    <ENUS>stadiums</ENUS>
   </msg>
   <msg id="Process ID" code="PROCESS_ID11161">
     <ENUS>Process ID</ENUS>
@@ -147,6 +159,9 @@
   <msg id="Modo de processamento" code="MODO_DE_PROCESSAMENT14469">
     <ENUS>Modo de processamento</ENUS>
   </msg>
+  <msg id="matches" code="MATCHES56954">
+    <ENUS>matches</ENUS>
+  </msg>
   <msg id="Notification Message" code="NOTIFICATION_MESSAGE31108">
     <ENUS>Notification Message</ENUS>
   </msg>
@@ -255,6 +270,9 @@
   <msg id="Modos de processamento" code="MODOS_DE_PROCESSAMEN07602">
     <ENUS>Modos de processamento</ENUS>
   </msg>
+  <msg id="goals" code="GOALS59839">
+    <ENUS>goals</ENUS>
+  </msg>
   <msg id="Bcc" code="BCC22049">
     <ENUS>Bcc</ENUS>
   </msg>
@@ -317,6 +335,9 @@
   </msg>
   <msg id="Terminado" code="TERMINADO46276">
     <ENUS>Terminado</ENUS>
+  </msg>
+  <msg id="players" code="PLAYERS01799">
+    <ENUS>players</ENUS>
   </msg>
   <msg id="Desautorizado" code="DESAUTORIZADO34584">
     <ENUS>Desautorizado</ENUS>
