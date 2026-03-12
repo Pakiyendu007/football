@@ -1,0 +1,6 @@
+PNLPSW_78A2BD44D2E74AAC
+    Tabela NotDup PSW
+    Tabela NotDup PSW
+PNLS_UA_E551EEFD2A7741B2
+    Tabela NotDup S_UA
+    Tabela NotDup S_UA
