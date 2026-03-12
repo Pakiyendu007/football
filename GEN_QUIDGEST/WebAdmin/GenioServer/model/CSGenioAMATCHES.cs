@@ -107,6 +107,16 @@ namespace CSGenio.business
 			info.RegisterFieldDB(Qfield);
 
 			//- - - - - - - - - - - - - - - - - - -
+			Qfield = new Field(info.Alias, "hometeam", FieldType.KEY_INT);
+			Qfield.FieldDescription = "home team";
+			Qfield.FieldSize =  8;
+			Qfield.MQueue = false;
+			Qfield.CavDesignation = "HOME_TEAM21446";
+
+			Qfield.Dupmsg = "";
+			info.RegisterFieldDB(Qfield);
+
+			//- - - - - - - - - - - - - - - - - - -
 			Qfield = new Field(info.Alias, "zzstate", FieldType.INTEGER);
 			Qfield.FieldDescription = "Estado da ficha";
 			info.RegisterFieldDB(Qfield);
@@ -127,7 +137,8 @@ namespace CSGenio.business
 			// Mother Relations
 			//------------------------------
 			info.ParentTables = new Dictionary<string, Relation>();
-			info.ParentTables.Add("team", new Relation("PNL", "pnlmatches", "matches", "codmatches", "awayteamid", "PNL", "pnlteam", "team", "codteam", "codteam"));
+			info.ParentTables.Add("awayteam", new Relation("PNL", "pnlmatches", "matches", "codmatches", "awayteamid", "PNL", "pnlawayteam", "awayteam", "codteam", "codteam"));
+			info.ParentTables.Add("team", new Relation("PNL", "pnlmatches", "matches", "codmatches", "hometeam", "PNL", "pnlteam", "team", "codteam", "codteam"));
 		}
 
 		/// <summary>
@@ -137,7 +148,8 @@ namespace CSGenio.business
 		{
 			// Pathways
 			//------------------------------
-			info.Pathways = new Dictionary<string, string>(1);
+			info.Pathways = new Dictionary<string, string>(2);
+			info.Pathways.Add("awayteam","awayteam");
 			info.Pathways.Add("team","team");
 		}
 
@@ -324,6 +336,17 @@ namespace CSGenio.business
 			set { insertNameValueField(FldAwaygoals, value); }
 		}
 
+		/// <summary>Field : "home team" Tipo: "CE" Formula:  ""</summary>
+		public static FieldRef FldHometeam { get { return m_fldHometeam; } }
+		private static FieldRef m_fldHometeam = new FieldRef("matches", "hometeam");
+
+		/// <summary>Field : "home team" Tipo: "CE" Formula:  ""</summary>
+		public string ValHometeam
+		{
+			get { return (string)returnValueField(FldHometeam); }
+			set { insertNameValueField(FldHometeam, value); }
+		}
+
 		/// <summary>Field : "ZZSTATE" Type: "INT" Formula:  ""</summary>
 		public static FieldRef FldZzstate { get { return m_fldZzstate; } }
 		private static FieldRef m_fldZzstate = new FieldRef("matches", "zzstate");
@@ -421,7 +444,7 @@ namespace CSGenio.business
 		// USE /[MANUAL PNL TABAUX MATCHES]/
 
  
-       
+        
 
 	}
 }

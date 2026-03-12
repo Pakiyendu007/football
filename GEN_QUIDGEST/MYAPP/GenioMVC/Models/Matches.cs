@@ -38,19 +38,19 @@ namespace GenioMVC.Models
 		[ShouldSerialize("Matches.ValAwayteamid")]
 		public string ValAwayteamid { get { return klass.ValAwayteamid; } set { klass.ValAwayteamid = value; } }
 
-		private Team _team;
-		[DisplayName("Team")]
-		[ShouldSerialize("Team")]
-		public virtual Team Team
+		private Awayteam _awayteam;
+		[DisplayName("Awayteam")]
+		[ShouldSerialize("Awayteam")]
+		public virtual Awayteam Awayteam
 		{
 			get
 			{
-				if (!isEmptyModel && (_team == null || (!string.IsNullOrEmpty(ValAwayteamid) && (_team.isEmptyModel || _team.klass.QPrimaryKey != ValAwayteamid))))
-					_team = Models.Team.Find(ValAwayteamid, m_userContext, Identifier, _fieldsToSerialize);
-				_team ??= new Models.Team(m_userContext, true, _fieldsToSerialize);
-				return _team;
+				if (!isEmptyModel && (_awayteam == null || (!string.IsNullOrEmpty(ValAwayteamid) && (_awayteam.isEmptyModel || _awayteam.klass.QPrimaryKey != ValAwayteamid))))
+					_awayteam = Models.Awayteam.Find(ValAwayteamid, m_userContext, Identifier, _fieldsToSerialize);
+				_awayteam ??= new Models.Awayteam(m_userContext, true, _fieldsToSerialize);
+				return _awayteam;
 			}
-			set { _team = value; }
+			set { _awayteam = value; }
 		}
 
 		[DisplayName("match date")]
@@ -71,6 +71,26 @@ namespace GenioMVC.Models
 		[ShouldSerialize("Matches.ValAwaygoals")]
 		[NumericAttribute(0)]
 		public decimal? ValAwaygoals { get { return Convert.ToDecimal(GenFunctions.RoundQG(klass.ValAwaygoals, 0)); } set { klass.ValAwaygoals = Convert.ToDecimal(value); } }
+
+		[DisplayName("home team")]
+		/// <summary>Field : "home team" Tipo: "CE" Formula:  ""</summary>
+		[ShouldSerialize("Matches.ValHometeam")]
+		public string ValHometeam { get { return klass.ValHometeam; } set { klass.ValHometeam = value; } }
+
+		private Team _team;
+		[DisplayName("Team")]
+		[ShouldSerialize("Team")]
+		public virtual Team Team
+		{
+			get
+			{
+				if (!isEmptyModel && (_team == null || (!string.IsNullOrEmpty(ValHometeam) && (_team.isEmptyModel || _team.klass.QPrimaryKey != ValHometeam))))
+					_team = Models.Team.Find(ValHometeam, m_userContext, Identifier, _fieldsToSerialize);
+				_team ??= new Models.Team(m_userContext, true, _fieldsToSerialize);
+				return _team;
+			}
+			set { _team = value; }
+		}
 
 		[DisplayName("ZZSTATE")]
 		[ShouldSerialize("Matches.ValZzstate")]
@@ -103,6 +123,10 @@ namespace GenioMVC.Models
 			{
 				switch (Qfield.Area)
 				{
+					case "awayteam":
+						_awayteam ??= new Awayteam(m_userContext, true, _fieldsToSerialize);
+						_awayteam.klass.insertNameValueField(Qfield.FullName, Qfield.Value);
+						break;
 					case "team":
 						_team ??= new Team(m_userContext, true, _fieldsToSerialize);
 						_team.klass.insertNameValueField(Qfield.FullName, Qfield.Value);

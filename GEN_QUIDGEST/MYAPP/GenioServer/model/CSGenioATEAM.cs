@@ -99,7 +99,7 @@ namespace CSGenio.business
 			// Daughters Relations
 			//------------------------------
 			info.ChildTable = new ChildRelation[1];
-			info.ChildTable[0]= new ChildRelation("matches", new String[] {"awayteamid"}, DeleteProc.NA);
+			info.ChildTable[0]= new ChildRelation("matches", new String[] {"hometeam"}, DeleteProc.NA);
 
 			// Mother Relations
 			//------------------------------

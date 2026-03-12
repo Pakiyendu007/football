@@ -153,6 +153,9 @@
   <msg id="Saves on DB?" code="SAVES_ON_DB_61384">
     <ENUS>Saves on DB?</ENUS>
   </msg>
+  <msg id="home team" code="HOME_TEAM21446">
+    <ENUS>home team</ENUS>
+  </msg>
   <msg id="Individual" code="INDIVIDUAL42893">
     <ENUS>Individual</ENUS>
   </msg>

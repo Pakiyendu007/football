@@ -136,8 +136,9 @@ namespace CSGenio.business
 		{
 			// Pathways
 			//------------------------------
-			info.Pathways = new Dictionary<string, string>(2);
+			info.Pathways = new Dictionary<string, string>(3);
 			info.Pathways.Add("matches","matches");
+			info.Pathways.Add("awayteam","matches");
 			info.Pathways.Add("team","matches");
 		}
 

@@ -14,23 +14,23 @@ using System.Linq;
 namespace CSGenio.business
 {
 	/// <summary>
-	/// goals
+	/// team
 	/// </summary>
-	public class CSGenioAgoals : DbArea
+	public class CSGenioAawayteam : DbArea
 	{
 		/// <summary>
 		/// Meta-information on this area
 		/// </summary>
 		protected readonly static AreaInfo informacao = InicializaAreaInfo();
 
-		public CSGenioAgoals(User user, string module)
+		public CSGenioAawayteam(User user, string module)
 		{
             this.user = user;
             this.module = module;
-			// USE /[MANUAL PNL CONSTRUTOR GOALS]/
+			// USE /[MANUAL PNL CONSTRUTOR AWAYTEAM]/
 		}
 
-		public CSGenioAgoals(User user) : this(user, user.CurrentModule)
+		public CSGenioAawayteam(User user) : this(user, user.CurrentModule)
 		{
 		}
 
@@ -44,7 +44,7 @@ namespace CSGenio.business
 			List<ByAreaArguments> argumentsListByArea;
 #pragma warning restore CS0168, S1481 // Variable is declared but never used
 			//- - - - - - - - - - - - - - - - - - -
-			Qfield = new Field(info.Alias, "codgoals", FieldType.KEY_INT);
+			Qfield = new Field(info.Alias, "codteam", FieldType.KEY_INT);
 			Qfield.FieldDescription = "";
 			Qfield.FieldSize =  8;
 			Qfield.MQueue = false;
@@ -54,43 +54,32 @@ namespace CSGenio.business
 			info.RegisterFieldDB(Qfield);
 
 			//- - - - - - - - - - - - - - - - - - -
-			Qfield = new Field(info.Alias, "goalsid", FieldType.NUMERIC);
-			Qfield.FieldDescription = "goals id";
-			Qfield.FieldSize =  15;
+			Qfield = new Field(info.Alias, "teamid", FieldType.NUMERIC);
+			Qfield.FieldDescription = "team id";
+			Qfield.FieldSize =  5;
 			Qfield.MQueue = false;
-			Qfield.IntegerDigits = 15;
-			Qfield.CavDesignation = "GOALS_ID25685";
+			Qfield.IntegerDigits = 5;
+			Qfield.CavDesignation = "TEAM_ID47569";
 
 			Qfield.Dupmsg = "";
 			info.RegisterFieldDB(Qfield);
 
 			//- - - - - - - - - - - - - - - - - - -
-			Qfield = new Field(info.Alias, "matchid", FieldType.KEY_INT);
-			Qfield.FieldDescription = "matchid";
-			Qfield.FieldSize =  8;
+			Qfield = new Field(info.Alias, "teamname", FieldType.TEXT);
+			Qfield.FieldDescription = "team name";
+			Qfield.FieldSize =  50;
 			Qfield.MQueue = false;
-			Qfield.CavDesignation = "MATCHID28731";
+			Qfield.CavDesignation = "TEAM_NAME40736";
 
 			Qfield.Dupmsg = "";
 			info.RegisterFieldDB(Qfield);
 
 			//- - - - - - - - - - - - - - - - - - -
-			Qfield = new Field(info.Alias, "playerid", FieldType.KEY_INT);
-			Qfield.FieldDescription = "player id";
-			Qfield.FieldSize =  8;
+			Qfield = new Field(info.Alias, "city", FieldType.TEXT);
+			Qfield.FieldDescription = "city";
+			Qfield.FieldSize =  50;
 			Qfield.MQueue = false;
-			Qfield.CavDesignation = "PLAYER_ID62777";
-
-			Qfield.Dupmsg = "";
-			info.RegisterFieldDB(Qfield);
-
-			//- - - - - - - - - - - - - - - - - - -
-			Qfield = new Field(info.Alias, "minute", FieldType.NUMERIC);
-			Qfield.FieldDescription = "minute";
-			Qfield.FieldSize =  10;
-			Qfield.MQueue = false;
-			Qfield.IntegerDigits = 10;
-			Qfield.CavDesignation = "MINUTE14222";
+			Qfield.CavDesignation = "CITY35974";
 
 			Qfield.Dupmsg = "";
 			info.RegisterFieldDB(Qfield);
@@ -109,12 +98,12 @@ namespace CSGenio.business
 		{
 			// Daughters Relations
 			//------------------------------
+			info.ChildTable = new ChildRelation[1];
+			info.ChildTable[0]= new ChildRelation("matches", new String[] {"awayteamid"}, DeleteProc.NA);
 
 			// Mother Relations
 			//------------------------------
 			info.ParentTables = new Dictionary<string, Relation>();
-			info.ParentTables.Add("matches", new Relation("PNL", "pnlgoals", "goals", "codgoals", "matchid", "PNL", "pnlmatches", "matches", "codmatches", "codmatches"));
-			info.ParentTables.Add("players", new Relation("PNL", "pnlgoals", "goals", "codgoals", "playerid", "PNL", "pnlplayers", "players", "codplayers", "codplayers"));
 		}
 
 		/// <summary>
@@ -124,11 +113,7 @@ namespace CSGenio.business
 		{
 			// Pathways
 			//------------------------------
-			info.Pathways = new Dictionary<string, string>(4);
-			info.Pathways.Add("matches","matches");
-			info.Pathways.Add("players","players");
-			info.Pathways.Add("awayteam","matches");
-			info.Pathways.Add("team","matches");
+			info.Pathways = new Dictionary<string, string>(0);
 		}
 
 		/// <summary>
@@ -154,7 +139,7 @@ namespace CSGenio.business
 		}
 
 		/// <summary>
-		/// static CSGenioAgoals()
+		/// static CSGenioAawayteam()
 		/// </summary>
 		private static AreaInfo InicializaAreaInfo()
 		{
@@ -162,18 +147,18 @@ namespace CSGenio.business
 
 			// Area meta-information
 			info.QSystem="PNL";
-			info.TableName="pnlgoals";
+			info.TableName="pnlawayteam";
 			info.ShadowTabName="";
 			info.ShadowTabKeyName="";
 
-			info.PrimaryKeyName="codgoals";
-			info.HumanKeyName="";
-			info.Alias="goals";
+			info.PrimaryKeyName="codteam";
+			info.HumanKeyName="teamid,".TrimEnd(',');
+			info.Alias="awayteam";
 			info.IsDomain = true;
 			info.PersistenceType = PersistenceType.Database;
-			info.AreaDesignation="goals";
-			info.AreaPluralDesignation="goals";
-			info.DescriptionCav="GOALS59839";
+			info.AreaDesignation="team";
+			info.AreaPluralDesignation="team";
+			info.DescriptionCav="TEAM57329";
 
 			//sincronização
 			info.SyncIncrementalDateStart = TimeSpan.FromHours(8);
@@ -249,63 +234,52 @@ namespace CSGenio.business
 		}
 
 		/// <summary>Field : "" Tipo: "+" Formula:  ""</summary>
-		public static FieldRef FldCodgoals { get { return m_fldCodgoals; } }
-		private static FieldRef m_fldCodgoals = new FieldRef("goals", "codgoals");
+		public static FieldRef FldCodteam { get { return m_fldCodteam; } }
+		private static FieldRef m_fldCodteam = new FieldRef("awayteam", "codteam");
 
 		/// <summary>Field : "" Tipo: "+" Formula:  ""</summary>
-		public string ValCodgoals
+		public string ValCodteam
 		{
-			get { return (string)returnValueField(FldCodgoals); }
-			set { insertNameValueField(FldCodgoals, value); }
+			get { return (string)returnValueField(FldCodteam); }
+			set { insertNameValueField(FldCodteam, value); }
 		}
 
-		/// <summary>Field : "goals id" Tipo: "N" Formula:  ""</summary>
-		public static FieldRef FldGoalsid { get { return m_fldGoalsid; } }
-		private static FieldRef m_fldGoalsid = new FieldRef("goals", "goalsid");
+		/// <summary>Field : "team id" Tipo: "N" Formula:  ""</summary>
+		public static FieldRef FldTeamid { get { return m_fldTeamid; } }
+		private static FieldRef m_fldTeamid = new FieldRef("awayteam", "teamid");
 
-		/// <summary>Field : "goals id" Tipo: "N" Formula:  ""</summary>
-		public decimal ValGoalsid
+		/// <summary>Field : "team id" Tipo: "N" Formula:  ""</summary>
+		public decimal ValTeamid
 		{
-			get { return (decimal)returnValueField(FldGoalsid); }
-			set { insertNameValueField(FldGoalsid, value); }
+			get { return (decimal)returnValueField(FldTeamid); }
+			set { insertNameValueField(FldTeamid, value); }
 		}
 
-		/// <summary>Field : "matchid" Tipo: "CE" Formula:  ""</summary>
-		public static FieldRef FldMatchid { get { return m_fldMatchid; } }
-		private static FieldRef m_fldMatchid = new FieldRef("goals", "matchid");
+		/// <summary>Field : "team name" Tipo: "C" Formula:  ""</summary>
+		public static FieldRef FldTeamname { get { return m_fldTeamname; } }
+		private static FieldRef m_fldTeamname = new FieldRef("awayteam", "teamname");
 
-		/// <summary>Field : "matchid" Tipo: "CE" Formula:  ""</summary>
-		public string ValMatchid
+		/// <summary>Field : "team name" Tipo: "C" Formula:  ""</summary>
+		public string ValTeamname
 		{
-			get { return (string)returnValueField(FldMatchid); }
-			set { insertNameValueField(FldMatchid, value); }
+			get { return (string)returnValueField(FldTeamname); }
+			set { insertNameValueField(FldTeamname, value); }
 		}
 
-		/// <summary>Field : "player id" Tipo: "CE" Formula:  ""</summary>
-		public static FieldRef FldPlayerid { get { return m_fldPlayerid; } }
-		private static FieldRef m_fldPlayerid = new FieldRef("goals", "playerid");
+		/// <summary>Field : "city" Tipo: "C" Formula:  ""</summary>
+		public static FieldRef FldCity { get { return m_fldCity; } }
+		private static FieldRef m_fldCity = new FieldRef("awayteam", "city");
 
-		/// <summary>Field : "player id" Tipo: "CE" Formula:  ""</summary>
-		public string ValPlayerid
+		/// <summary>Field : "city" Tipo: "C" Formula:  ""</summary>
+		public string ValCity
 		{
-			get { return (string)returnValueField(FldPlayerid); }
-			set { insertNameValueField(FldPlayerid, value); }
-		}
-
-		/// <summary>Field : "minute" Tipo: "N" Formula:  ""</summary>
-		public static FieldRef FldMinute { get { return m_fldMinute; } }
-		private static FieldRef m_fldMinute = new FieldRef("goals", "minute");
-
-		/// <summary>Field : "minute" Tipo: "N" Formula:  ""</summary>
-		public decimal ValMinute
-		{
-			get { return (decimal)returnValueField(FldMinute); }
-			set { insertNameValueField(FldMinute, value); }
+			get { return (string)returnValueField(FldCity); }
+			set { insertNameValueField(FldCity, value); }
 		}
 
 		/// <summary>Field : "ZZSTATE" Type: "INT" Formula:  ""</summary>
 		public static FieldRef FldZzstate { get { return m_fldZzstate; } }
-		private static FieldRef m_fldZzstate = new FieldRef("goals", "zzstate");
+		private static FieldRef m_fldZzstate = new FieldRef("awayteam", "zzstate");
 
 
 
@@ -326,12 +300,12 @@ namespace CSGenio.business
 		/// <param name="forUpdate">True if you are preparing to update this record, false otherwise</param>
         /// <returns>An area with the fields requests of the record read or null if the key does not exist</returns>
         /// <remarks>Persistence operations should not be used on a partially positioned register</remarks>
-        public static CSGenioAgoals search(PersistentSupport sp, string key, User user, string[] fields = null, bool forUpdate = false)
+        public static CSGenioAawayteam search(PersistentSupport sp, string key, User user, string[] fields = null, bool forUpdate = false)
         {
 			if (string.IsNullOrEmpty(key))
 				return null;
 
-		    CSGenioAgoals area = new CSGenioAgoals(user, user.CurrentModule);
+		    CSGenioAawayteam area = new CSGenioAawayteam(user, user.CurrentModule);
 
             if (sp.getRecord(area, key, fields, forUpdate))
                 return area;
@@ -358,9 +332,9 @@ namespace CSGenio.business
         /// <param name="noLock">NOLOCK</param>
         /// <returns>A list of area records with all fields populated</returns>
         /// <remarks>Persistence operations should not be used on a partially positioned register</remarks>
-        public static List<CSGenioAgoals> searchList(PersistentSupport sp, User user, CriteriaSet where, string[] fields = null, bool distinct = false, bool noLock = false)
+        public static List<CSGenioAawayteam> searchList(PersistentSupport sp, User user, CriteriaSet where, string[] fields = null, bool distinct = false, bool noLock = false)
         {
-				return sp.searchListWhere<CSGenioAgoals>(where, user, fields, distinct, noLock);
+				return sp.searchListWhere<CSGenioAawayteam>(where, user, fields, distinct, noLock);
         }
 
 
@@ -374,9 +348,9 @@ namespace CSGenio.business
         /// <param name="listing">List configuration</param>
         /// <returns>A list of area records with all fields populated</returns>
         /// <remarks>Persistence operations should not be used on a partially positioned register</remarks>
-        public static void searchListAdvancedWhere(PersistentSupport sp, User user, CriteriaSet where, ListingMVC<CSGenioAgoals> listing)
+        public static void searchListAdvancedWhere(PersistentSupport sp, User user, CriteriaSet where, ListingMVC<CSGenioAawayteam> listing)
         {
-			sp.searchListAdvancedWhere<CSGenioAgoals>(where, listing);
+			sp.searchListAdvancedWhere<CSGenioAawayteam>(where, listing);
         }
 
 
@@ -397,10 +371,10 @@ namespace CSGenio.business
 
 
 
-		// USE /[MANUAL PNL TABAUX GOALS]/
+		// USE /[MANUAL PNL TABAUX AWAYTEAM]/
 
  
-      
+     
 
 	}
 }

@@ -28,6 +28,8 @@ namespace CSGenio.business
         private static AreaRef m_AreaTEAM = new AreaRef("PNL", "pnlteam", "team");
         public static AreaRef AreaCOACHS { get { return m_AreaCOACHS; } }
         private static AreaRef m_AreaCOACHS = new AreaRef("PNL", "pnlcoachs", "coachs");
+        public static AreaRef AreaAWAYTEAM { get { return m_AreaAWAYTEAM; } }
+        private static AreaRef m_AreaAWAYTEAM = new AreaRef("PNL", "pnlawayteam", "awayteam");
         public static AreaRef AreaS_NM { get { return m_AreaS_NM; } }
         private static AreaRef m_AreaS_NM = new AreaRef("PNL", "notificationmessage", "s_nm");
         public static AreaRef AreaS_APR { get { return m_AreaS_APR; } }
@@ -85,6 +87,7 @@ namespace CSGenio.business
             "goals",
             "team",
             "coachs",
+            "awayteam",
             "s_nm",
             "s_apr",
             "referees",
