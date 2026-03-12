@@ -27,6 +27,22 @@ namespace GenioMVC.Models
 		[ShouldSerialize("Team.ValCodteam")]
 		public string ValCodteam { get { return klass.ValCodteam; } set { klass.ValCodteam = value; } }
 
+		[DisplayName("team id")]
+		/// <summary>Field : "team id" Tipo: "N" Formula:  ""</summary>
+		[ShouldSerialize("Team.ValTeamid")]
+		[NumericAttribute(0)]
+		public decimal? ValTeamid { get { return Convert.ToDecimal(GenFunctions.RoundQG(klass.ValTeamid, 0)); } set { klass.ValTeamid = Convert.ToDecimal(value); } }
+
+		[DisplayName("team name")]
+		/// <summary>Field : "team name" Tipo: "C" Formula:  ""</summary>
+		[ShouldSerialize("Team.ValTeamname")]
+		public string ValTeamname { get { return klass.ValTeamname; } set { klass.ValTeamname = value; } }
+
+		[DisplayName("city")]
+		/// <summary>Field : "city" Tipo: "C" Formula:  ""</summary>
+		[ShouldSerialize("Team.ValCity")]
+		public string ValCity { get { return klass.ValCity; } set { klass.ValCity = value; } }
+
 		[DisplayName("ZZSTATE")]
 		[ShouldSerialize("Team.ValZzstate")]
 		/// <summary>Field: "ZZSTATE", Type: "INT", Formula: ""</summary>

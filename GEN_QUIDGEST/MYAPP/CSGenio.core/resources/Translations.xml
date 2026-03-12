@@ -111,6 +111,9 @@
   <msg id="Agendado para execução" code="AGENDADO_PARA_EXECUC11223">
     <ENUS>Agendado para execução</ENUS>
   </msg>
+  <msg id="home goals" code="HOME_GOALS11591">
+    <ENUS>home goals</ENUS>
+  </msg>
   <msg id="Obs" code="OBS42026">
     <ENUS>Obs</ENUS>
   </msg>
@@ -119,6 +122,9 @@
   </msg>
   <msg id="Notification ID" code="NOTIFICATION_ID25507">
     <ENUS>Notification ID</ENUS>
+  </msg>
+  <msg id="awayteam id" code="AWAYTEAM_ID17063">
+    <ENUS>awayteam id</ENUS>
   </msg>
   <msg id="Roles" code="ROLES61449">
     <ENUS>Roles</ENUS>
@@ -141,6 +147,9 @@
   <msg id="Description" code="DESCRIPTION07383">
     <ENUS>Description</ENUS>
   </msg>
+  <msg id="goals id" code="GOALS_ID25685">
+    <ENUS>goals id</ENUS>
+  </msg>
   <msg id="Saves on DB?" code="SAVES_ON_DB_61384">
     <ENUS>Saves on DB?</ENUS>
   </msg>
@@ -155,6 +164,9 @@
   </msg>
   <msg id="Subject" code="SUBJECT33942">
     <ENUS>Subject</ENUS>
+  </msg>
+  <msg id="city" code="CITY35974">
+    <ENUS>city</ENUS>
   </msg>
   <msg id="Modo de processamento" code="MODO_DE_PROCESSAMENT14469">
     <ENUS>Modo de processamento</ENUS>
@@ -177,8 +189,14 @@
   <msg id="My application" code="MY_APPLICATION56216">
     <ENUS>My application</ENUS>
   </msg>
+  <msg id="minute" code="MINUTE14222">
+    <ENUS>minute</ENUS>
+  </msg>
   <msg id="Created on" code="CREATED_ON00051">
     <ENUS>Created on</ENUS>
+  </msg>
+  <msg id="age" code="AGE26077">
+    <ENUS>age</ENUS>
   </msg>
   <msg id="Resultados" code="RESULTADOS20000">
     <ENUS>Resultados</ENUS>
@@ -191,6 +209,9 @@
   </msg>
   <msg id="Horário" code="HORARIO56549">
     <ENUS>Horário</ENUS>
+  </msg>
+  <msg id="position" code="POSITION56645">
+    <ENUS>position</ENUS>
   </msg>
   <msg id="Certified Series Number" code="CERTIFIED_SERIES_NUM14349">
     <ENUS>Certified Series Number</ENUS>
@@ -206,6 +227,9 @@
   </msg>
   <msg id="Duration" code="DURATION40426">
     <ENUS>Duration</ENUS>
+  </msg>
+  <msg id="player id" code="PLAYER_ID62777">
+    <ENUS>player id</ENUS>
   </msg>
   <msg id="Phone number" code="PHONE_NUMBER20774">
     <ENUS>Phone number</ENUS>
@@ -224,6 +248,9 @@
   </msg>
   <msg id="Routine" code="ROUTINE58306">
     <ENUS>Routine</ENUS>
+  </msg>
+  <msg id="playername" code="PLAYERNAME24447">
+    <ENUS>playername</ENUS>
   </msg>
   <msg id="Module" code="MODULE42049">
     <ENUS>Module</ENUS>
@@ -258,17 +285,26 @@
   <msg id="User ID" code="USER_ID13914">
     <ENUS>User ID</ENUS>
   </msg>
+  <msg id="team id" code="TEAM_ID47569">
+    <ENUS>team id</ENUS>
+  </msg>
   <msg id="Entid key" code="ENTID_KEY04396">
     <ENUS>Entid key</ENUS>
   </msg>
   <msg id="Async process argument" code="ASYNC_PROCESS_ARGUME19111">
     <ENUS>Async process argument</ENUS>
   </msg>
+  <msg id="away goals" code="AWAY_GOALS14181">
+    <ENUS>away goals</ENUS>
+  </msg>
   <msg id="Expiration date" code="EXPIRATION_DATE34293">
     <ENUS>Expiration date</ENUS>
   </msg>
   <msg id="Modos de processamento" code="MODOS_DE_PROCESSAMEN07602">
     <ENUS>Modos de processamento</ENUS>
+  </msg>
+  <msg id="match date" code="MATCH_DATE48973">
+    <ENUS>match date</ENUS>
   </msg>
   <msg id="goals" code="GOALS59839">
     <ENUS>goals</ENUS>
@@ -279,6 +315,9 @@
   <msg id="Async process attachment" code="ASYNC_PROCESS_ATTACH34417">
     <ENUS>Async process attachment</ENUS>
   </msg>
+  <msg id="match id" code="MATCH_ID16862">
+    <ENUS>match id</ENUS>
+  </msg>
   <msg id="Motive" code="MOTIVE13407">
     <ENUS>Motive</ENUS>
   </msg>
@@ -287,6 +326,9 @@
   </msg>
   <msg id="Changed by" code="CHANGED_BY08967">
     <ENUS>Changed by</ENUS>
+  </msg>
+  <msg id="hometeam id" code="HOMETEAM_ID64278">
+    <ENUS>hometeam id</ENUS>
   </msg>
   <msg id="Date" code="DATE18475">
     <ENUS>Date</ENUS>
@@ -315,8 +357,14 @@
   <msg id="End time" code="END_TIME53495">
     <ENUS>End time</ENUS>
   </msg>
+  <msg id="team name" code="TEAM_NAME40736">
+    <ENUS>team name</ENUS>
+  </msg>
   <msg id="Message" code="MESSAGE30602">
     <ENUS>Message</ENUS>
+  </msg>
+  <msg id="matchid" code="MATCHID28731">
+    <ENUS>matchid</ENUS>
   </msg>
   <msg id="Em fila de espera" code="EM_FILA_DE_ESPERA21822">
     <ENUS>Em fila de espera</ENUS>

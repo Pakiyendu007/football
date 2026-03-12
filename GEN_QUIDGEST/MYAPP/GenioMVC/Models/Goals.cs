@@ -27,6 +27,58 @@ namespace GenioMVC.Models
 		[ShouldSerialize("Goals.ValCodgoals")]
 		public string ValCodgoals { get { return klass.ValCodgoals; } set { klass.ValCodgoals = value; } }
 
+		[DisplayName("goals id")]
+		/// <summary>Field : "goals id" Tipo: "N" Formula:  ""</summary>
+		[ShouldSerialize("Goals.ValGoalsid")]
+		[NumericAttribute(0)]
+		public decimal? ValGoalsid { get { return Convert.ToDecimal(GenFunctions.RoundQG(klass.ValGoalsid, 0)); } set { klass.ValGoalsid = Convert.ToDecimal(value); } }
+
+		[DisplayName("matchid")]
+		/// <summary>Field : "matchid" Tipo: "CE" Formula:  ""</summary>
+		[ShouldSerialize("Goals.ValMatchid")]
+		public string ValMatchid { get { return klass.ValMatchid; } set { klass.ValMatchid = value; } }
+
+		private Matches _matches;
+		[DisplayName("Matches")]
+		[ShouldSerialize("Matches")]
+		public virtual Matches Matches
+		{
+			get
+			{
+				if (!isEmptyModel && (_matches == null || (!string.IsNullOrEmpty(ValMatchid) && (_matches.isEmptyModel || _matches.klass.QPrimaryKey != ValMatchid))))
+					_matches = Models.Matches.Find(ValMatchid, m_userContext, Identifier, _fieldsToSerialize);
+				_matches ??= new Models.Matches(m_userContext, true, _fieldsToSerialize);
+				return _matches;
+			}
+			set { _matches = value; }
+		}
+
+		[DisplayName("player id")]
+		/// <summary>Field : "player id" Tipo: "CE" Formula:  ""</summary>
+		[ShouldSerialize("Goals.ValPlayerid")]
+		public string ValPlayerid { get { return klass.ValPlayerid; } set { klass.ValPlayerid = value; } }
+
+		private Players _players;
+		[DisplayName("Players")]
+		[ShouldSerialize("Players")]
+		public virtual Players Players
+		{
+			get
+			{
+				if (!isEmptyModel && (_players == null || (!string.IsNullOrEmpty(ValPlayerid) && (_players.isEmptyModel || _players.klass.QPrimaryKey != ValPlayerid))))
+					_players = Models.Players.Find(ValPlayerid, m_userContext, Identifier, _fieldsToSerialize);
+				_players ??= new Models.Players(m_userContext, true, _fieldsToSerialize);
+				return _players;
+			}
+			set { _players = value; }
+		}
+
+		[DisplayName("minute")]
+		/// <summary>Field : "minute" Tipo: "N" Formula:  ""</summary>
+		[ShouldSerialize("Goals.ValMinute")]
+		[NumericAttribute(0)]
+		public decimal? ValMinute { get { return Convert.ToDecimal(GenFunctions.RoundQG(klass.ValMinute, 0)); } set { klass.ValMinute = Convert.ToDecimal(value); } }
+
 		[DisplayName("ZZSTATE")]
 		[ShouldSerialize("Goals.ValZzstate")]
 		/// <summary>Field: "ZZSTATE", Type: "INT", Formula: ""</summary>
@@ -58,6 +110,14 @@ namespace GenioMVC.Models
 			{
 				switch (Qfield.Area)
 				{
+					case "matches":
+						_matches ??= new Matches(m_userContext, true, _fieldsToSerialize);
+						_matches.klass.insertNameValueField(Qfield.FullName, Qfield.Value);
+						break;
+					case "players":
+						_players ??= new Players(m_userContext, true, _fieldsToSerialize);
+						_players.klass.insertNameValueField(Qfield.FullName, Qfield.Value);
+						break;
 					default:
 						break;
 				}

@@ -54,6 +54,59 @@ namespace CSGenio.business
 			info.RegisterFieldDB(Qfield);
 
 			//- - - - - - - - - - - - - - - - - - -
+			Qfield = new Field(info.Alias, "matchid", FieldType.NUMERIC);
+			Qfield.FieldDescription = "match id";
+			Qfield.FieldSize =  8;
+			Qfield.MQueue = false;
+			Qfield.IntegerDigits = 8;
+			Qfield.CavDesignation = "MATCH_ID16862";
+
+			Qfield.Dupmsg = "";
+			info.RegisterFieldDB(Qfield);
+
+			//- - - - - - - - - - - - - - - - - - -
+			Qfield = new Field(info.Alias, "awayteamid", FieldType.KEY_INT);
+			Qfield.FieldDescription = "awayteam id";
+			Qfield.FieldSize =  8;
+			Qfield.MQueue = false;
+			Qfield.CavDesignation = "AWAYTEAM_ID17063";
+
+			Qfield.Dupmsg = "";
+			info.RegisterFieldDB(Qfield);
+
+			//- - - - - - - - - - - - - - - - - - -
+			Qfield = new Field(info.Alias, "matchdate", FieldType.DATE);
+			Qfield.FieldDescription = "match date";
+			Qfield.FieldSize =  8;
+			Qfield.MQueue = false;
+			Qfield.CavDesignation = "MATCH_DATE48973";
+
+			Qfield.Dupmsg = "";
+			info.RegisterFieldDB(Qfield);
+
+			//- - - - - - - - - - - - - - - - - - -
+			Qfield = new Field(info.Alias, "homegoals", FieldType.NUMERIC);
+			Qfield.FieldDescription = "home goals";
+			Qfield.FieldSize =  10;
+			Qfield.MQueue = false;
+			Qfield.IntegerDigits = 10;
+			Qfield.CavDesignation = "HOME_GOALS11591";
+
+			Qfield.Dupmsg = "";
+			info.RegisterFieldDB(Qfield);
+
+			//- - - - - - - - - - - - - - - - - - -
+			Qfield = new Field(info.Alias, "awaygoals", FieldType.NUMERIC);
+			Qfield.FieldDescription = "away goals";
+			Qfield.FieldSize =  10;
+			Qfield.MQueue = false;
+			Qfield.IntegerDigits = 10;
+			Qfield.CavDesignation = "AWAY_GOALS14181";
+
+			Qfield.Dupmsg = "";
+			info.RegisterFieldDB(Qfield);
+
+			//- - - - - - - - - - - - - - - - - - -
 			Qfield = new Field(info.Alias, "zzstate", FieldType.INTEGER);
 			Qfield.FieldDescription = "Estado da ficha";
 			info.RegisterFieldDB(Qfield);
@@ -67,10 +120,14 @@ namespace CSGenio.business
 		{
 			// Daughters Relations
 			//------------------------------
+			info.ChildTable = new ChildRelation[2];
+			info.ChildTable[0]= new ChildRelation("players", new String[] {"teamid"}, DeleteProc.NA);
+			info.ChildTable[1]= new ChildRelation("goals", new String[] {"matchid"}, DeleteProc.NA);
 
 			// Mother Relations
 			//------------------------------
 			info.ParentTables = new Dictionary<string, Relation>();
+			info.ParentTables.Add("team", new Relation("PNL", "pnlmatches", "matches", "codmatches", "awayteamid", "PNL", "pnlteam", "team", "codteam", "codteam"));
 		}
 
 		/// <summary>
@@ -80,7 +137,8 @@ namespace CSGenio.business
 		{
 			// Pathways
 			//------------------------------
-			info.Pathways = new Dictionary<string, string>(0);
+			info.Pathways = new Dictionary<string, string>(1);
+			info.Pathways.Add("team","team");
 		}
 
 		/// <summary>
@@ -119,7 +177,7 @@ namespace CSGenio.business
 			info.ShadowTabKeyName="";
 
 			info.PrimaryKeyName="codmatches";
-			info.HumanKeyName="";
+			info.HumanKeyName="matchid,".TrimEnd(',');
 			info.Alias="matches";
 			info.IsDomain = true;
 			info.PersistenceType = PersistenceType.Database;
@@ -209,6 +267,61 @@ namespace CSGenio.business
 		{
 			get { return (string)returnValueField(FldCodmatches); }
 			set { insertNameValueField(FldCodmatches, value); }
+		}
+
+		/// <summary>Field : "match id" Tipo: "N" Formula:  ""</summary>
+		public static FieldRef FldMatchid { get { return m_fldMatchid; } }
+		private static FieldRef m_fldMatchid = new FieldRef("matches", "matchid");
+
+		/// <summary>Field : "match id" Tipo: "N" Formula:  ""</summary>
+		public decimal ValMatchid
+		{
+			get { return (decimal)returnValueField(FldMatchid); }
+			set { insertNameValueField(FldMatchid, value); }
+		}
+
+		/// <summary>Field : "awayteam id" Tipo: "CE" Formula:  ""</summary>
+		public static FieldRef FldAwayteamid { get { return m_fldAwayteamid; } }
+		private static FieldRef m_fldAwayteamid = new FieldRef("matches", "awayteamid");
+
+		/// <summary>Field : "awayteam id" Tipo: "CE" Formula:  ""</summary>
+		public string ValAwayteamid
+		{
+			get { return (string)returnValueField(FldAwayteamid); }
+			set { insertNameValueField(FldAwayteamid, value); }
+		}
+
+		/// <summary>Field : "match date" Tipo: "D" Formula:  ""</summary>
+		public static FieldRef FldMatchdate { get { return m_fldMatchdate; } }
+		private static FieldRef m_fldMatchdate = new FieldRef("matches", "matchdate");
+
+		/// <summary>Field : "match date" Tipo: "D" Formula:  ""</summary>
+		public DateTime ValMatchdate
+		{
+			get { return (DateTime)returnValueField(FldMatchdate); }
+			set { insertNameValueField(FldMatchdate, value); }
+		}
+
+		/// <summary>Field : "home goals" Tipo: "N" Formula:  ""</summary>
+		public static FieldRef FldHomegoals { get { return m_fldHomegoals; } }
+		private static FieldRef m_fldHomegoals = new FieldRef("matches", "homegoals");
+
+		/// <summary>Field : "home goals" Tipo: "N" Formula:  ""</summary>
+		public decimal ValHomegoals
+		{
+			get { return (decimal)returnValueField(FldHomegoals); }
+			set { insertNameValueField(FldHomegoals, value); }
+		}
+
+		/// <summary>Field : "away goals" Tipo: "N" Formula:  ""</summary>
+		public static FieldRef FldAwaygoals { get { return m_fldAwaygoals; } }
+		private static FieldRef m_fldAwaygoals = new FieldRef("matches", "awaygoals");
+
+		/// <summary>Field : "away goals" Tipo: "N" Formula:  ""</summary>
+		public decimal ValAwaygoals
+		{
+			get { return (decimal)returnValueField(FldAwaygoals); }
+			set { insertNameValueField(FldAwaygoals, value); }
 		}
 
 		/// <summary>Field : "ZZSTATE" Type: "INT" Formula:  ""</summary>
@@ -308,7 +421,7 @@ namespace CSGenio.business
 		// USE /[MANUAL PNL TABAUX MATCHES]/
 
  
-  
+       
 
 	}
 }

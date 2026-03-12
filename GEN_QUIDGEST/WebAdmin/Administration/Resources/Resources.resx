@@ -228,6 +228,9 @@
   <data name="AGENDADO_PARA_EXECUC11223" xml:space="preserve">
     <value>Agendado para execução</value>
   </data>
+  <data name="HOME_GOALS11591" xml:space="preserve">
+    <value>home goals</value>
+  </data>
   <data name="OBS42026" xml:space="preserve">
     <value>Obs</value>
   </data>
@@ -236,6 +239,9 @@
   </data>
   <data name="NOTIFICATION_ID25507" xml:space="preserve">
     <value>Notification ID</value>
+  </data>
+  <data name="AWAYTEAM_ID17063" xml:space="preserve">
+    <value>awayteam id</value>
   </data>
   <data name="ROLES61449" xml:space="preserve">
     <value>Roles</value>
@@ -258,6 +264,9 @@
   <data name="DESCRIPTION07383" xml:space="preserve">
     <value>Description</value>
   </data>
+  <data name="GOALS_ID25685" xml:space="preserve">
+    <value>goals id</value>
+  </data>
   <data name="SAVES_ON_DB_61384" xml:space="preserve">
     <value>Saves on DB?</value>
   </data>
@@ -272,6 +281,9 @@
   </data>
   <data name="SUBJECT33942" xml:space="preserve">
     <value>Subject</value>
+  </data>
+  <data name="CITY35974" xml:space="preserve">
+    <value>city</value>
   </data>
   <data name="MODO_DE_PROCESSAMENT14469" xml:space="preserve">
     <value>Modo de processamento</value>
@@ -294,8 +306,14 @@
   <data name="MY_APPLICATION56216" xml:space="preserve">
     <value>My application</value>
   </data>
+  <data name="MINUTE14222" xml:space="preserve">
+    <value>minute</value>
+  </data>
   <data name="CREATED_ON00051" xml:space="preserve">
     <value>Created on</value>
+  </data>
+  <data name="AGE26077" xml:space="preserve">
+    <value>age</value>
   </data>
   <data name="RESULTADOS20000" xml:space="preserve">
     <value>Resultados</value>
@@ -308,6 +326,9 @@
   </data>
   <data name="HORARIO56549" xml:space="preserve">
     <value>Horário</value>
+  </data>
+  <data name="POSITION56645" xml:space="preserve">
+    <value>position</value>
   </data>
   <data name="CERTIFIED_SERIES_NUM14349" xml:space="preserve">
     <value>Certified Series Number</value>
@@ -323,6 +344,9 @@
   </data>
   <data name="DURATION40426" xml:space="preserve">
     <value>Duration</value>
+  </data>
+  <data name="PLAYER_ID62777" xml:space="preserve">
+    <value>player id</value>
   </data>
   <data name="PHONE_NUMBER20774" xml:space="preserve">
     <value>Phone number</value>
@@ -341,6 +365,9 @@
   </data>
   <data name="ROUTINE58306" xml:space="preserve">
     <value>Routine</value>
+  </data>
+  <data name="PLAYERNAME24447" xml:space="preserve">
+    <value>playername</value>
   </data>
   <data name="MODULE42049" xml:space="preserve">
     <value>Module</value>
@@ -375,17 +402,26 @@
   <data name="USER_ID13914" xml:space="preserve">
     <value>User ID</value>
   </data>
+  <data name="TEAM_ID47569" xml:space="preserve">
+    <value>team id</value>
+  </data>
   <data name="ENTID_KEY04396" xml:space="preserve">
     <value>Entid key</value>
   </data>
   <data name="ASYNC_PROCESS_ARGUME19111" xml:space="preserve">
     <value>Async process argument</value>
   </data>
+  <data name="AWAY_GOALS14181" xml:space="preserve">
+    <value>away goals</value>
+  </data>
   <data name="EXPIRATION_DATE34293" xml:space="preserve">
     <value>Expiration date</value>
   </data>
   <data name="MODOS_DE_PROCESSAMEN07602" xml:space="preserve">
     <value>Modos de processamento</value>
+  </data>
+  <data name="MATCH_DATE48973" xml:space="preserve">
+    <value>match date</value>
   </data>
   <data name="GOALS59839" xml:space="preserve">
     <value>goals</value>
@@ -396,6 +432,9 @@
   <data name="ASYNC_PROCESS_ATTACH34417" xml:space="preserve">
     <value>Async process attachment</value>
   </data>
+  <data name="MATCH_ID16862" xml:space="preserve">
+    <value>match id</value>
+  </data>
   <data name="MOTIVE13407" xml:space="preserve">
     <value>Motive</value>
   </data>
@@ -404,6 +443,9 @@
   </data>
   <data name="CHANGED_BY08967" xml:space="preserve">
     <value>Changed by</value>
+  </data>
+  <data name="HOMETEAM_ID64278" xml:space="preserve">
+    <value>hometeam id</value>
   </data>
   <data name="DATE18475" xml:space="preserve">
     <value>Date</value>
@@ -432,8 +474,14 @@
   <data name="END_TIME53495" xml:space="preserve">
     <value>End time</value>
   </data>
+  <data name="TEAM_NAME40736" xml:space="preserve">
+    <value>team name</value>
+  </data>
   <data name="MESSAGE30602" xml:space="preserve">
     <value>Message</value>
+  </data>
+  <data name="MATCHID28731" xml:space="preserve">
+    <value>matchid</value>
   </data>
   <data name="EM_FILA_DE_ESPERA21822" xml:space="preserve">
     <value>Em fila de espera</value>

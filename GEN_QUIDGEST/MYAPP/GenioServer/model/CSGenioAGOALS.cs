@@ -54,6 +54,48 @@ namespace CSGenio.business
 			info.RegisterFieldDB(Qfield);
 
 			//- - - - - - - - - - - - - - - - - - -
+			Qfield = new Field(info.Alias, "goalsid", FieldType.NUMERIC);
+			Qfield.FieldDescription = "goals id";
+			Qfield.FieldSize =  15;
+			Qfield.MQueue = false;
+			Qfield.IntegerDigits = 15;
+			Qfield.CavDesignation = "GOALS_ID25685";
+
+			Qfield.Dupmsg = "";
+			info.RegisterFieldDB(Qfield);
+
+			//- - - - - - - - - - - - - - - - - - -
+			Qfield = new Field(info.Alias, "matchid", FieldType.KEY_INT);
+			Qfield.FieldDescription = "matchid";
+			Qfield.FieldSize =  8;
+			Qfield.MQueue = false;
+			Qfield.CavDesignation = "MATCHID28731";
+
+			Qfield.Dupmsg = "";
+			info.RegisterFieldDB(Qfield);
+
+			//- - - - - - - - - - - - - - - - - - -
+			Qfield = new Field(info.Alias, "playerid", FieldType.KEY_INT);
+			Qfield.FieldDescription = "player id";
+			Qfield.FieldSize =  8;
+			Qfield.MQueue = false;
+			Qfield.CavDesignation = "PLAYER_ID62777";
+
+			Qfield.Dupmsg = "";
+			info.RegisterFieldDB(Qfield);
+
+			//- - - - - - - - - - - - - - - - - - -
+			Qfield = new Field(info.Alias, "minute", FieldType.NUMERIC);
+			Qfield.FieldDescription = "minute";
+			Qfield.FieldSize =  10;
+			Qfield.MQueue = false;
+			Qfield.IntegerDigits = 10;
+			Qfield.CavDesignation = "MINUTE14222";
+
+			Qfield.Dupmsg = "";
+			info.RegisterFieldDB(Qfield);
+
+			//- - - - - - - - - - - - - - - - - - -
 			Qfield = new Field(info.Alias, "zzstate", FieldType.INTEGER);
 			Qfield.FieldDescription = "Estado da ficha";
 			info.RegisterFieldDB(Qfield);
@@ -71,6 +113,8 @@ namespace CSGenio.business
 			// Mother Relations
 			//------------------------------
 			info.ParentTables = new Dictionary<string, Relation>();
+			info.ParentTables.Add("matches", new Relation("PNL", "pnlgoals", "goals", "codgoals", "matchid", "PNL", "pnlmatches", "matches", "codmatches", "codmatches"));
+			info.ParentTables.Add("players", new Relation("PNL", "pnlgoals", "goals", "codgoals", "playerid", "PNL", "pnlplayers", "players", "codplayers", "codplayers"));
 		}
 
 		/// <summary>
@@ -80,7 +124,10 @@ namespace CSGenio.business
 		{
 			// Pathways
 			//------------------------------
-			info.Pathways = new Dictionary<string, string>(0);
+			info.Pathways = new Dictionary<string, string>(3);
+			info.Pathways.Add("matches","matches");
+			info.Pathways.Add("players","players");
+			info.Pathways.Add("team","matches");
 		}
 
 		/// <summary>
@@ -211,6 +258,50 @@ namespace CSGenio.business
 			set { insertNameValueField(FldCodgoals, value); }
 		}
 
+		/// <summary>Field : "goals id" Tipo: "N" Formula:  ""</summary>
+		public static FieldRef FldGoalsid { get { return m_fldGoalsid; } }
+		private static FieldRef m_fldGoalsid = new FieldRef("goals", "goalsid");
+
+		/// <summary>Field : "goals id" Tipo: "N" Formula:  ""</summary>
+		public decimal ValGoalsid
+		{
+			get { return (decimal)returnValueField(FldGoalsid); }
+			set { insertNameValueField(FldGoalsid, value); }
+		}
+
+		/// <summary>Field : "matchid" Tipo: "CE" Formula:  ""</summary>
+		public static FieldRef FldMatchid { get { return m_fldMatchid; } }
+		private static FieldRef m_fldMatchid = new FieldRef("goals", "matchid");
+
+		/// <summary>Field : "matchid" Tipo: "CE" Formula:  ""</summary>
+		public string ValMatchid
+		{
+			get { return (string)returnValueField(FldMatchid); }
+			set { insertNameValueField(FldMatchid, value); }
+		}
+
+		/// <summary>Field : "player id" Tipo: "CE" Formula:  ""</summary>
+		public static FieldRef FldPlayerid { get { return m_fldPlayerid; } }
+		private static FieldRef m_fldPlayerid = new FieldRef("goals", "playerid");
+
+		/// <summary>Field : "player id" Tipo: "CE" Formula:  ""</summary>
+		public string ValPlayerid
+		{
+			get { return (string)returnValueField(FldPlayerid); }
+			set { insertNameValueField(FldPlayerid, value); }
+		}
+
+		/// <summary>Field : "minute" Tipo: "N" Formula:  ""</summary>
+		public static FieldRef FldMinute { get { return m_fldMinute; } }
+		private static FieldRef m_fldMinute = new FieldRef("goals", "minute");
+
+		/// <summary>Field : "minute" Tipo: "N" Formula:  ""</summary>
+		public decimal ValMinute
+		{
+			get { return (decimal)returnValueField(FldMinute); }
+			set { insertNameValueField(FldMinute, value); }
+		}
+
 		/// <summary>Field : "ZZSTATE" Type: "INT" Formula:  ""</summary>
 		public static FieldRef FldZzstate { get { return m_fldZzstate; } }
 		private static FieldRef m_fldZzstate = new FieldRef("goals", "zzstate");
@@ -308,7 +399,7 @@ namespace CSGenio.business
 		// USE /[MANUAL PNL TABAUX GOALS]/
 
  
-  
+      
 
 	}
 }

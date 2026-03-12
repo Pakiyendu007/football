@@ -394,6 +394,15 @@ namespace Administration.Resources {
         }
 
         /// <summary>
+        ///   Looks up a localized string similar to "home goals"
+        /// </summary>
+        public static string HOME_GOALS11591 {
+            get {
+                return ResourceManager.GetString("HOME_GOALS11591", resourceCulture);
+            }
+        }
+
+        /// <summary>
         ///   Looks up a localized string similar to "Obs"
         /// </summary>
         public static string OBS42026 {
@@ -417,6 +426,15 @@ namespace Administration.Resources {
         public static string NOTIFICATION_ID25507 {
             get {
                 return ResourceManager.GetString("NOTIFICATION_ID25507", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "awayteam id"
+        /// </summary>
+        public static string AWAYTEAM_ID17063 {
+            get {
+                return ResourceManager.GetString("AWAYTEAM_ID17063", resourceCulture);
             }
         }
 
@@ -484,6 +502,15 @@ namespace Administration.Resources {
         }
 
         /// <summary>
+        ///   Looks up a localized string similar to "goals id"
+        /// </summary>
+        public static string GOALS_ID25685 {
+            get {
+                return ResourceManager.GetString("GOALS_ID25685", resourceCulture);
+            }
+        }
+
+        /// <summary>
         ///   Looks up a localized string similar to "Saves on DB?"
         /// </summary>
         public static string SAVES_ON_DB_61384 {
@@ -525,6 +552,15 @@ namespace Administration.Resources {
         public static string SUBJECT33942 {
             get {
                 return ResourceManager.GetString("SUBJECT33942", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "city"
+        /// </summary>
+        public static string CITY35974 {
+            get {
+                return ResourceManager.GetString("CITY35974", resourceCulture);
             }
         }
 
@@ -592,11 +628,29 @@ namespace Administration.Resources {
         }
 
         /// <summary>
+        ///   Looks up a localized string similar to "minute"
+        /// </summary>
+        public static string MINUTE14222 {
+            get {
+                return ResourceManager.GetString("MINUTE14222", resourceCulture);
+            }
+        }
+
+        /// <summary>
         ///   Looks up a localized string similar to "Created on"
         /// </summary>
         public static string CREATED_ON00051 {
             get {
                 return ResourceManager.GetString("CREATED_ON00051", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "age"
+        /// </summary>
+        public static string AGE26077 {
+            get {
+                return ResourceManager.GetString("AGE26077", resourceCulture);
             }
         }
 
@@ -633,6 +687,15 @@ namespace Administration.Resources {
         public static string HORARIO56549 {
             get {
                 return ResourceManager.GetString("HORARIO56549", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "position"
+        /// </summary>
+        public static string POSITION56645 {
+            get {
+                return ResourceManager.GetString("POSITION56645", resourceCulture);
             }
         }
 
@@ -678,6 +741,15 @@ namespace Administration.Resources {
         public static string DURATION40426 {
             get {
                 return ResourceManager.GetString("DURATION40426", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "player id"
+        /// </summary>
+        public static string PLAYER_ID62777 {
+            get {
+                return ResourceManager.GetString("PLAYER_ID62777", resourceCulture);
             }
         }
 
@@ -732,6 +804,15 @@ namespace Administration.Resources {
         public static string ROUTINE58306 {
             get {
                 return ResourceManager.GetString("ROUTINE58306", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "playername"
+        /// </summary>
+        public static string PLAYERNAME24447 {
+            get {
+                return ResourceManager.GetString("PLAYERNAME24447", resourceCulture);
             }
         }
 
@@ -835,6 +916,15 @@ namespace Administration.Resources {
         }
 
         /// <summary>
+        ///   Looks up a localized string similar to "team id"
+        /// </summary>
+        public static string TEAM_ID47569 {
+            get {
+                return ResourceManager.GetString("TEAM_ID47569", resourceCulture);
+            }
+        }
+
+        /// <summary>
         ///   Looks up a localized string similar to "Entid key"
         /// </summary>
         public static string ENTID_KEY04396 {
@@ -853,6 +943,15 @@ namespace Administration.Resources {
         }
 
         /// <summary>
+        ///   Looks up a localized string similar to "away goals"
+        /// </summary>
+        public static string AWAY_GOALS14181 {
+            get {
+                return ResourceManager.GetString("AWAY_GOALS14181", resourceCulture);
+            }
+        }
+
+        /// <summary>
         ///   Looks up a localized string similar to "Expiration date"
         /// </summary>
         public static string EXPIRATION_DATE34293 {
@@ -867,6 +966,15 @@ namespace Administration.Resources {
         public static string MODOS_DE_PROCESSAMEN07602 {
             get {
                 return ResourceManager.GetString("MODOS_DE_PROCESSAMEN07602", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "match date"
+        /// </summary>
+        public static string MATCH_DATE48973 {
+            get {
+                return ResourceManager.GetString("MATCH_DATE48973", resourceCulture);
             }
         }
 
@@ -898,6 +1006,15 @@ namespace Administration.Resources {
         }
 
         /// <summary>
+        ///   Looks up a localized string similar to "match id"
+        /// </summary>
+        public static string MATCH_ID16862 {
+            get {
+                return ResourceManager.GetString("MATCH_ID16862", resourceCulture);
+            }
+        }
+
+        /// <summary>
         ///   Looks up a localized string similar to "Motive"
         /// </summary>
         public static string MOTIVE13407 {
@@ -921,6 +1038,15 @@ namespace Administration.Resources {
         public static string CHANGED_BY08967 {
             get {
                 return ResourceManager.GetString("CHANGED_BY08967", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "hometeam id"
+        /// </summary>
+        public static string HOMETEAM_ID64278 {
+            get {
+                return ResourceManager.GetString("HOMETEAM_ID64278", resourceCulture);
             }
         }
 
@@ -1006,11 +1132,29 @@ namespace Administration.Resources {
         }
 
         /// <summary>
+        ///   Looks up a localized string similar to "team name"
+        /// </summary>
+        public static string TEAM_NAME40736 {
+            get {
+                return ResourceManager.GetString("TEAM_NAME40736", resourceCulture);
+            }
+        }
+
+        /// <summary>
         ///   Looks up a localized string similar to "Message"
         /// </summary>
         public static string MESSAGE30602 {
             get {
                 return ResourceManager.GetString("MESSAGE30602", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "matchid"
+        /// </summary>
+        public static string MATCHID28731 {
+            get {
+                return ResourceManager.GetString("MATCHID28731", resourceCulture);
             }
         }
 

@@ -54,6 +54,37 @@ namespace CSGenio.business
 			info.RegisterFieldDB(Qfield);
 
 			//- - - - - - - - - - - - - - - - - - -
+			Qfield = new Field(info.Alias, "teamid", FieldType.NUMERIC);
+			Qfield.FieldDescription = "team id";
+			Qfield.FieldSize =  5;
+			Qfield.MQueue = false;
+			Qfield.IntegerDigits = 5;
+			Qfield.CavDesignation = "TEAM_ID47569";
+
+			Qfield.Dupmsg = "";
+			info.RegisterFieldDB(Qfield);
+
+			//- - - - - - - - - - - - - - - - - - -
+			Qfield = new Field(info.Alias, "teamname", FieldType.TEXT);
+			Qfield.FieldDescription = "team name";
+			Qfield.FieldSize =  50;
+			Qfield.MQueue = false;
+			Qfield.CavDesignation = "TEAM_NAME40736";
+
+			Qfield.Dupmsg = "";
+			info.RegisterFieldDB(Qfield);
+
+			//- - - - - - - - - - - - - - - - - - -
+			Qfield = new Field(info.Alias, "city", FieldType.TEXT);
+			Qfield.FieldDescription = "city";
+			Qfield.FieldSize =  50;
+			Qfield.MQueue = false;
+			Qfield.CavDesignation = "CITY35974";
+
+			Qfield.Dupmsg = "";
+			info.RegisterFieldDB(Qfield);
+
+			//- - - - - - - - - - - - - - - - - - -
 			Qfield = new Field(info.Alias, "zzstate", FieldType.INTEGER);
 			Qfield.FieldDescription = "Estado da ficha";
 			info.RegisterFieldDB(Qfield);
@@ -67,6 +98,8 @@ namespace CSGenio.business
 		{
 			// Daughters Relations
 			//------------------------------
+			info.ChildTable = new ChildRelation[1];
+			info.ChildTable[0]= new ChildRelation("matches", new String[] {"awayteamid"}, DeleteProc.NA);
 
 			// Mother Relations
 			//------------------------------
@@ -119,7 +152,7 @@ namespace CSGenio.business
 			info.ShadowTabKeyName="";
 
 			info.PrimaryKeyName="codteam";
-			info.HumanKeyName="";
+			info.HumanKeyName="teamid,".TrimEnd(',');
 			info.Alias="team";
 			info.IsDomain = true;
 			info.PersistenceType = PersistenceType.Database;
@@ -209,6 +242,39 @@ namespace CSGenio.business
 		{
 			get { return (string)returnValueField(FldCodteam); }
 			set { insertNameValueField(FldCodteam, value); }
+		}
+
+		/// <summary>Field : "team id" Tipo: "N" Formula:  ""</summary>
+		public static FieldRef FldTeamid { get { return m_fldTeamid; } }
+		private static FieldRef m_fldTeamid = new FieldRef("team", "teamid");
+
+		/// <summary>Field : "team id" Tipo: "N" Formula:  ""</summary>
+		public decimal ValTeamid
+		{
+			get { return (decimal)returnValueField(FldTeamid); }
+			set { insertNameValueField(FldTeamid, value); }
+		}
+
+		/// <summary>Field : "team name" Tipo: "C" Formula:  ""</summary>
+		public static FieldRef FldTeamname { get { return m_fldTeamname; } }
+		private static FieldRef m_fldTeamname = new FieldRef("team", "teamname");
+
+		/// <summary>Field : "team name" Tipo: "C" Formula:  ""</summary>
+		public string ValTeamname
+		{
+			get { return (string)returnValueField(FldTeamname); }
+			set { insertNameValueField(FldTeamname, value); }
+		}
+
+		/// <summary>Field : "city" Tipo: "C" Formula:  ""</summary>
+		public static FieldRef FldCity { get { return m_fldCity; } }
+		private static FieldRef m_fldCity = new FieldRef("team", "city");
+
+		/// <summary>Field : "city" Tipo: "C" Formula:  ""</summary>
+		public string ValCity
+		{
+			get { return (string)returnValueField(FldCity); }
+			set { insertNameValueField(FldCity, value); }
 		}
 
 		/// <summary>Field : "ZZSTATE" Type: "INT" Formula:  ""</summary>
@@ -308,7 +374,7 @@ namespace CSGenio.business
 		// USE /[MANUAL PNL TABAUX TEAM]/
 
  
-  
+     
 
 	}
 }

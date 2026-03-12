@@ -44,11 +44,64 @@ namespace CSGenio.business
 			List<ByAreaArguments> argumentsListByArea;
 #pragma warning restore CS0168, S1481 // Variable is declared but never used
 			//- - - - - - - - - - - - - - - - - - -
+			Qfield = new Field(info.Alias, "position", FieldType.NUMERIC);
+			Qfield.FieldDescription = "position";
+			Qfield.FieldSize =  5;
+			Qfield.MQueue = false;
+			Qfield.IntegerDigits = 5;
+			Qfield.CavDesignation = "POSITION56645";
+
+			Qfield.Dupmsg = "";
+			info.RegisterFieldDB(Qfield);
+
+			//- - - - - - - - - - - - - - - - - - -
 			Qfield = new Field(info.Alias, "codplayers", FieldType.KEY_INT);
 			Qfield.FieldDescription = "";
 			Qfield.FieldSize =  8;
 			Qfield.MQueue = false;
 			Qfield.CavDesignation = "";
+
+			Qfield.Dupmsg = "";
+			info.RegisterFieldDB(Qfield);
+
+			//- - - - - - - - - - - - - - - - - - -
+			Qfield = new Field(info.Alias, "playerid", FieldType.NUMERIC);
+			Qfield.FieldDescription = "player id";
+			Qfield.FieldSize =  5;
+			Qfield.MQueue = false;
+			Qfield.IntegerDigits = 5;
+			Qfield.CavDesignation = "PLAYER_ID62777";
+
+			Qfield.Dupmsg = "";
+			info.RegisterFieldDB(Qfield);
+
+			//- - - - - - - - - - - - - - - - - - -
+			Qfield = new Field(info.Alias, "playername", FieldType.TEXT);
+			Qfield.FieldDescription = "playername";
+			Qfield.FieldSize =  50;
+			Qfield.MQueue = false;
+			Qfield.CavDesignation = "PLAYERNAME24447";
+
+			Qfield.Dupmsg = "";
+			info.RegisterFieldDB(Qfield);
+
+			//- - - - - - - - - - - - - - - - - - -
+			Qfield = new Field(info.Alias, "age", FieldType.NUMERIC);
+			Qfield.FieldDescription = "age";
+			Qfield.FieldSize =  5;
+			Qfield.MQueue = false;
+			Qfield.IntegerDigits = 5;
+			Qfield.CavDesignation = "AGE26077";
+
+			Qfield.Dupmsg = "";
+			info.RegisterFieldDB(Qfield);
+
+			//- - - - - - - - - - - - - - - - - - -
+			Qfield = new Field(info.Alias, "teamid", FieldType.KEY_INT);
+			Qfield.FieldDescription = "team id";
+			Qfield.FieldSize =  8;
+			Qfield.MQueue = false;
+			Qfield.CavDesignation = "TEAM_ID47569";
 
 			Qfield.Dupmsg = "";
 			info.RegisterFieldDB(Qfield);
@@ -67,10 +120,13 @@ namespace CSGenio.business
 		{
 			// Daughters Relations
 			//------------------------------
+			info.ChildTable = new ChildRelation[1];
+			info.ChildTable[0]= new ChildRelation("goals", new String[] {"playerid"}, DeleteProc.NA);
 
 			// Mother Relations
 			//------------------------------
 			info.ParentTables = new Dictionary<string, Relation>();
+			info.ParentTables.Add("matches", new Relation("PNL", "pnlplayers", "players", "codplayers", "teamid", "PNL", "pnlmatches", "matches", "codmatches", "codmatches"));
 		}
 
 		/// <summary>
@@ -80,7 +136,9 @@ namespace CSGenio.business
 		{
 			// Pathways
 			//------------------------------
-			info.Pathways = new Dictionary<string, string>(0);
+			info.Pathways = new Dictionary<string, string>(2);
+			info.Pathways.Add("matches","matches");
+			info.Pathways.Add("team","matches");
 		}
 
 		/// <summary>
@@ -119,7 +177,7 @@ namespace CSGenio.business
 			info.ShadowTabKeyName="";
 
 			info.PrimaryKeyName="codplayers";
-			info.HumanKeyName="";
+			info.HumanKeyName="playerid,".TrimEnd(',');
 			info.Alias="players";
 			info.IsDomain = true;
 			info.PersistenceType = PersistenceType.Database;
@@ -200,6 +258,17 @@ namespace CSGenio.business
 			return informacao;
 		}
 
+		/// <summary>Field : "position" Tipo: "N" Formula:  ""</summary>
+		public static FieldRef FldPosition { get { return m_fldPosition; } }
+		private static FieldRef m_fldPosition = new FieldRef("players", "position");
+
+		/// <summary>Field : "position" Tipo: "N" Formula:  ""</summary>
+		public decimal ValPosition
+		{
+			get { return (decimal)returnValueField(FldPosition); }
+			set { insertNameValueField(FldPosition, value); }
+		}
+
 		/// <summary>Field : "" Tipo: "+" Formula:  ""</summary>
 		public static FieldRef FldCodplayers { get { return m_fldCodplayers; } }
 		private static FieldRef m_fldCodplayers = new FieldRef("players", "codplayers");
@@ -209,6 +278,50 @@ namespace CSGenio.business
 		{
 			get { return (string)returnValueField(FldCodplayers); }
 			set { insertNameValueField(FldCodplayers, value); }
+		}
+
+		/// <summary>Field : "player id" Tipo: "N" Formula:  ""</summary>
+		public static FieldRef FldPlayerid { get { return m_fldPlayerid; } }
+		private static FieldRef m_fldPlayerid = new FieldRef("players", "playerid");
+
+		/// <summary>Field : "player id" Tipo: "N" Formula:  ""</summary>
+		public decimal ValPlayerid
+		{
+			get { return (decimal)returnValueField(FldPlayerid); }
+			set { insertNameValueField(FldPlayerid, value); }
+		}
+
+		/// <summary>Field : "playername" Tipo: "C" Formula:  ""</summary>
+		public static FieldRef FldPlayername { get { return m_fldPlayername; } }
+		private static FieldRef m_fldPlayername = new FieldRef("players", "playername");
+
+		/// <summary>Field : "playername" Tipo: "C" Formula:  ""</summary>
+		public string ValPlayername
+		{
+			get { return (string)returnValueField(FldPlayername); }
+			set { insertNameValueField(FldPlayername, value); }
+		}
+
+		/// <summary>Field : "age" Tipo: "N" Formula:  ""</summary>
+		public static FieldRef FldAge { get { return m_fldAge; } }
+		private static FieldRef m_fldAge = new FieldRef("players", "age");
+
+		/// <summary>Field : "age" Tipo: "N" Formula:  ""</summary>
+		public decimal ValAge
+		{
+			get { return (decimal)returnValueField(FldAge); }
+			set { insertNameValueField(FldAge, value); }
+		}
+
+		/// <summary>Field : "team id" Tipo: "CE" Formula:  ""</summary>
+		public static FieldRef FldTeamid { get { return m_fldTeamid; } }
+		private static FieldRef m_fldTeamid = new FieldRef("players", "teamid");
+
+		/// <summary>Field : "team id" Tipo: "CE" Formula:  ""</summary>
+		public string ValTeamid
+		{
+			get { return (string)returnValueField(FldTeamid); }
+			set { insertNameValueField(FldTeamid, value); }
 		}
 
 		/// <summary>Field : "ZZSTATE" Type: "INT" Formula:  ""</summary>
@@ -308,7 +421,7 @@ namespace CSGenio.business
 		// USE /[MANUAL PNL TABAUX PLAYERS]/
 
  
-  
+       
 
 	}
 }
