@@ -267,6 +267,9 @@
   <msg id="nationality" code="NATIONALITY53539">
     <ENUS>nationality</ENUS>
   </msg>
+  <msg id="football system" code="FOOTBALL_SYSTEM60875">
+    <ENUS>football system</ENUS>
+  </msg>
   <msg id="Administrador" code="ADMINISTRADOR57294">
     <ENUS>Administrador</ENUS>
   </msg>
@@ -374,6 +377,9 @@
   </msg>
   <msg id="team name" code="TEAM_NAME40736">
     <ENUS>team name</ENUS>
+  </msg>
+  <msg id="teams" code="TEAMS39649">
+    <ENUS>teams</ENUS>
   </msg>
   <msg id="Message" code="MESSAGE30602">
     <ENUS>Message</ENUS>

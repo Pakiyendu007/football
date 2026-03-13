@@ -384,6 +384,9 @@
 	<data name="NATIONALITY53539" xml:space="preserve">
 		<value>nationality</value>
 	</data>
+	<data name="FOOTBALL_SYSTEM60875" xml:space="preserve">
+		<value>football system</value>
+	</data>
 	<data name="ADMINISTRADOR57294" xml:space="preserve">
 		<value>Administrador</value>
 	</data>
@@ -491,6 +494,9 @@
 	</data>
 	<data name="TEAM_NAME40736" xml:space="preserve">
 		<value>team name</value>
+	</data>
+	<data name="TEAMS39649" xml:space="preserve">
+		<value>teams</value>
 	</data>
 	<data name="MESSAGE30602" xml:space="preserve">
 		<value>Message</value>

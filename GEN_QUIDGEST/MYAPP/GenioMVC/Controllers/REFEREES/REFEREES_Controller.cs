@@ -20,6 +20,7 @@ using GenioMVC.Models.Exception;
 using GenioMVC.Models.Navigation;
 using GenioMVC.Resources;
 using GenioMVC.ViewModels;
+using GenioMVC.ViewModels.Referees;
 using GenioServer.business;
 using CSGenio.core.ai;
 
@@ -50,6 +51,22 @@ namespace GenioMVC.Controllers
 // USE /[MANUAL PNL MANUAL_CONTROLLER REFEREES]/
 
 
+
+
+
+		/// <summary>
+		/// Recalculate formulas of the "F_referees" form. (++, CT, SR, CL and U1)
+		/// </summary>
+		/// <param name="formData">Current form data</param>
+		/// <returns></returns>
+		[HttpPost]
+		public JsonResult RecalculateFormulas_F_referees([FromBody]F_referees_ViewModel formData)
+		{
+			return GenericRecalculateFormulas(formData, "referees",
+				(primaryKey) => Models.Referees.Find(primaryKey, UserContext.Current, "FF_REFEREES"),
+				(model) => formData.MapToModel(model as Models.Referees)
+			);
+		}
 
 		/// <summary>
 		/// Get "See more..." tree structure

@@ -1,4 +1,36 @@
 ﻿<?xml version="1.0" encoding="utf-16"?>
 <ArrayOfMenuEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <MenuEntry TYPE="ITEM" DESC="MY_APPLICATION56216" ID="PNL" IMG="" IMGVUE="" LVL="0" PREVIEW="false" SEPARATES="false" SUMMENU="false" HIDEMENUSUM="false" HASCONDITION="false" ISFORM="false" />
+  <MenuEntry TYPE="ITEM" DESC="MY_APPLICATION56216" ID="PNL" IMG="" IMGVUE="" LVL="0" PREVIEW="false" SEPARATES="false" SUMMENU="false" HIDEMENUSUM="false" HASCONDITION="false" ISFORM="false">
+    <MENU TYPE="ITEM" DESC="FOOTBALL_SYSTEM60875" SIGLA="" ID="1" HELPTITLE="" LVL="1" PREVIEW="false" SEPARATES="false" SUMMENU="false" HIDEMENUSUM="false" HASCONDITION="false" ISFORM="false" ORDER="1" DEFAULTACTION="">
+      <ACCESS>1</ACCESS>
+      <MENU TYPE="ITEM" DESC="TEAMS39649" SIGLA="" ID="11" PRTID="1" HELPTITLE="" LVL="2" PREVIEW="false" SEPARATES="false" SUMMENU="false" HIDEMENUSUM="false" HASCONDITION="false" ISFORM="false" ORDER="11" DEFAULTACTION="">
+        <ACCESS>1</ACCESS>
+        <MENU TYPE="ITEM" DESC="TEAM57329" ID="111" PRTID="11" IMG="" ACT="GenGenio.MenuDBEdit" ACTMVC="PNL_Menu_111" ACTVUE="menu-PNL_111" CONT="AWAYTEAM" LVL="-1" PREVIEW="false" SEPARATES="false" SUMMENU="false" HIDEMENUSUM="false" HASCONDITION="false" ISFORM="false" ORDER="111" />
+      </MENU>
+      <MENU TYPE="ITEM" DESC="MATCHES56954" SIGLA="" ID="12" PRTID="1" HELPTITLE="" LVL="2" PREVIEW="false" SEPARATES="false" SUMMENU="false" HIDEMENUSUM="false" HASCONDITION="false" ISFORM="false" ORDER="12" DEFAULTACTION="">
+        <ACCESS>1</ACCESS>
+        <MENU TYPE="ITEM" DESC="MATCHES56954" ID="121" PRTID="12" IMG="" ACT="GenGenio.MenuDBEdit" ACTMVC="PNL_Menu_121" ACTVUE="menu-PNL_121" CONT="MATCHES" LVL="-1" PREVIEW="false" SEPARATES="false" SUMMENU="false" HIDEMENUSUM="false" HASCONDITION="false" ISFORM="false" ORDER="121">
+          <MENU TYPE="ITEM" ID="1211" PRTID="121" IMG="" ACT="GenGenio.MenuFormConsulta" LVL="-1" PREVIEW="false" SEPARATES="false" SUMMENU="false" HIDEMENUSUM="false" HASCONDITION="false" ISFORM="false" ORDER="1211" />
+        </MENU>
+      </MENU>
+      <MENU TYPE="ITEM" DESC="PLAYERS01799" SIGLA="" ID="13" PRTID="1" HELPTITLE="" LVL="2" PREVIEW="false" SEPARATES="false" SUMMENU="false" HIDEMENUSUM="false" HASCONDITION="false" ISFORM="false" ORDER="13" DEFAULTACTION="">
+        <ACCESS>1</ACCESS>
+        <MENU TYPE="ITEM" DESC="PLAYERS01799" ID="131" PRTID="13" IMG="" ACT="GenGenio.MenuDBEdit" ACTMVC="PNL_Menu_131" ACTVUE="menu-PNL_131" CONT="PLAYERS" LVL="-1" PREVIEW="false" SEPARATES="false" SUMMENU="false" HIDEMENUSUM="false" HASCONDITION="false" ISFORM="false" ORDER="131">
+          <MENU TYPE="ITEM" ID="1311" PRTID="131" IMG="" ACT="GenGenio.MenuFormConsulta" LVL="-1" PREVIEW="false" SEPARATES="false" SUMMENU="false" HIDEMENUSUM="false" HASCONDITION="false" ISFORM="false" ORDER="1311" />
+        </MENU>
+      </MENU>
+      <MENU TYPE="ITEM" DESC="REFEREES03665" SIGLA="" ID="14" PRTID="1" HELPTITLE="" LVL="2" PREVIEW="false" SEPARATES="false" SUMMENU="false" HIDEMENUSUM="false" HASCONDITION="false" ISFORM="false" ORDER="14" DEFAULTACTION="">
+        <ACCESS>1</ACCESS>
+        <MENU TYPE="ITEM" DESC="REFEREES03665" ID="141" PRTID="14" IMG="" ACT="GenGenio.MenuDBEdit" ACTMVC="PNL_Menu_141" ACTVUE="menu-PNL_141" CONT="REFEREES" LVL="-1" PREVIEW="false" SEPARATES="false" SUMMENU="false" HIDEMENUSUM="false" HASCONDITION="false" ISFORM="false" ORDER="141">
+          <MENU TYPE="ITEM" ID="1411" PRTID="141" IMG="" ACT="GenGenio.MenuFormConsulta" LVL="-1" PREVIEW="false" SEPARATES="false" SUMMENU="false" HIDEMENUSUM="false" HASCONDITION="false" ISFORM="false" ORDER="1411" />
+        </MENU>
+      </MENU>
+      <MENU TYPE="ITEM" DESC="GOALS59839" SIGLA="" ID="15" PRTID="1" HELPTITLE="" LVL="2" PREVIEW="false" SEPARATES="false" SUMMENU="false" HIDEMENUSUM="false" HASCONDITION="false" ISFORM="false" ORDER="15" DEFAULTACTION="">
+        <ACCESS>1</ACCESS>
+        <MENU TYPE="ITEM" DESC="GOALS59839" ID="151" PRTID="15" IMG="" ACT="GenGenio.MenuDBEdit" ACTMVC="PNL_Menu_151" ACTVUE="menu-PNL_151" CONT="GOALS" LVL="-1" PREVIEW="false" SEPARATES="false" SUMMENU="false" HIDEMENUSUM="false" HASCONDITION="false" ISFORM="false" ORDER="151">
+          <MENU TYPE="ITEM" ID="1511" PRTID="151" IMG="" ACT="GenGenio.MenuFormConsulta" LVL="-1" PREVIEW="false" SEPARATES="false" SUMMENU="false" HIDEMENUSUM="false" HASCONDITION="false" ISFORM="false" ORDER="1511" />
+        </MENU>
+      </MENU>
+    </MENU>
+  </MenuEntry>
 </ArrayOfMenuEntry>

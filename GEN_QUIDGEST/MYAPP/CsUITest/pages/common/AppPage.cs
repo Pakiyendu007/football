@@ -103,6 +103,12 @@ public class AppPage: PageObject
 
 		module = "PNL";
 		res.AddModule(module);
+		res.AddMenu(module, "1", null);
+		res.AddMenu(module, "11", "1");
+		res.AddMenu(module, "12", "1");
+		res.AddMenu(module, "13", "1");
+		res.AddMenu(module, "14", "1");
+		res.AddMenu(module, "15", "1");
         return res;
     }
 }

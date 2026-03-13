@@ -20,6 +20,7 @@ using GenioMVC.Models.Exception;
 using GenioMVC.Models.Navigation;
 using GenioMVC.Resources;
 using GenioMVC.ViewModels;
+using GenioMVC.ViewModels.Awayteam;
 using GenioServer.business;
 using CSGenio.core.ai;
 
@@ -50,6 +51,22 @@ namespace GenioMVC.Controllers
 // USE /[MANUAL PNL MANUAL_CONTROLLER AWAYTEAM]/
 
 
+
+
+
+		/// <summary>
+		/// Recalculate formulas of the "F_team" form. (++, CT, SR, CL and U1)
+		/// </summary>
+		/// <param name="formData">Current form data</param>
+		/// <returns></returns>
+		[HttpPost]
+		public JsonResult RecalculateFormulas_F_team([FromBody]F_team_ViewModel formData)
+		{
+			return GenericRecalculateFormulas(formData, "awayteam",
+				(primaryKey) => Models.Awayteam.Find(primaryKey, UserContext.Current, "FF_TEAM"),
+				(model) => formData.MapToModel(model as Models.Awayteam)
+			);
+		}
 
 		/// <summary>
 		/// Get "See more..." tree structure
