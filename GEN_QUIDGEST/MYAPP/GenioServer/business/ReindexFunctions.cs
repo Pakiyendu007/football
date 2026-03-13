@@ -55,32 +55,6 @@ namespace CSGenio.business
             }
                 
 
-            /* --- PNLCOACHS --- */
-            dm = sp.Execute(
-                new SelectQuery()
-                .Select(CSGenioAcoachs.FldCodcoachs)
-                .From(CSGenioAcoachs.AreaCOACHS)
-                .Where(CriteriaSet.And().In(CSGenioAcoachs.FldZzstate, zzstateToRemove))
-                );
-
-            for (int i = 0; i < dm.NumRows; i++)
-            {
-                CSGenioAcoachs model = new CSGenioAcoachs(user);
-                model.ValCodcoachs = dm.GetKey(i, 0);
-
-                try
-                {
-                    model.delete(sp);
-                }
-                //Not every exception should be allowed to continue record deletion, only business exceptions need to be caught and allow to deletion continue.
-                //If there are other types of exceptions, such as database connection problems, for example, execution should be stopped immediately
-                catch(BusinessException ex)
-                {
-                    Log.Error((ex.UserMessage != null) ? ex.UserMessage : ex.Message);
-                }
-            }
-                
-
             /* --- PNLMEM --- */
             dm = sp.Execute(
                 new SelectQuery()
@@ -223,32 +197,6 @@ namespace CSGenio.business
             {
                 CSGenioAs_nm model = new CSGenioAs_nm(user);
                 model.ValCodmesgs = dm.GetKey(i, 0);
-
-                try
-                {
-                    model.delete(sp);
-                }
-                //Not every exception should be allowed to continue record deletion, only business exceptions need to be caught and allow to deletion continue.
-                //If there are other types of exceptions, such as database connection problems, for example, execution should be stopped immediately
-                catch(BusinessException ex)
-                {
-                    Log.Error((ex.UserMessage != null) ? ex.UserMessage : ex.Message);
-                }
-            }
-                
-
-            /* --- PNLSTADIUMS --- */
-            dm = sp.Execute(
-                new SelectQuery()
-                .Select(CSGenioAstadiums.FldCodstadiums)
-                .From(CSGenioAstadiums.AreaSTADIUMS)
-                .Where(CriteriaSet.And().In(CSGenioAstadiums.FldZzstate, zzstateToRemove))
-                );
-
-            for (int i = 0; i < dm.NumRows; i++)
-            {
-                CSGenioAstadiums model = new CSGenioAstadiums(user);
-                model.ValCodstadiums = dm.GetKey(i, 0);
 
                 try
                 {

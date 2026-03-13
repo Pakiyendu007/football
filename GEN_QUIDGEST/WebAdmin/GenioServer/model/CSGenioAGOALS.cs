@@ -167,7 +167,7 @@ namespace CSGenio.business
 			info.ShadowTabKeyName="";
 
 			info.PrimaryKeyName="codgoals";
-			info.HumanKeyName="";
+			info.HumanKeyName="goalsid,".TrimEnd(',');
 			info.Alias="goals";
 			info.IsDomain = true;
 			info.PersistenceType = PersistenceType.Database;

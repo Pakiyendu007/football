@@ -26,8 +26,6 @@ namespace CSGenio.business
         private static AreaRef m_AreaGOALS = new AreaRef("PNL", "pnlgoals", "goals");
         public static AreaRef AreaTEAM { get { return m_AreaTEAM; } }
         private static AreaRef m_AreaTEAM = new AreaRef("PNL", "pnlteam", "team");
-        public static AreaRef AreaCOACHS { get { return m_AreaCOACHS; } }
-        private static AreaRef m_AreaCOACHS = new AreaRef("PNL", "pnlcoachs", "coachs");
         public static AreaRef AreaAWAYTEAM { get { return m_AreaAWAYTEAM; } }
         private static AreaRef m_AreaAWAYTEAM = new AreaRef("PNL", "pnlawayteam", "awayteam");
         public static AreaRef AreaS_NM { get { return m_AreaS_NM; } }
@@ -42,8 +40,6 @@ namespace CSGenio.business
         private static AreaRef m_AreaS_UA = new AreaRef("PNL", "userauthorization", "s_ua");
         public static AreaRef AreaPSW { get { return m_AreaPSW; } }
         private static AreaRef m_AreaPSW = new AreaRef("PNL", "userlogin", "psw");
-        public static AreaRef AreaSTADIUMS { get { return m_AreaSTADIUMS; } }
-        private static AreaRef m_AreaSTADIUMS = new AreaRef("PNL", "pnlstadiums", "stadiums");
         public static AreaRef AreaS_PAX { get { return m_AreaS_PAX; } }
         private static AreaRef m_AreaS_PAX = new AreaRef("PNL", "asyncprocessattachments", "s_pax");
         public static AreaRef AreaMATCHES { get { return m_AreaMATCHES; } }
@@ -86,7 +82,6 @@ namespace CSGenio.business
             "players",
             "goals",
             "team",
-            "coachs",
             "awayteam",
             "s_nm",
             "s_apr",
@@ -94,7 +89,6 @@ namespace CSGenio.business
             "s_arg",
             "s_ua",
             "psw",
-            "stadiums",
             "s_pax",
             "matches",
             "s_nes",
