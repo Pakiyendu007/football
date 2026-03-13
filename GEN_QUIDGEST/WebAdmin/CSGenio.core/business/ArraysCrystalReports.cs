@@ -20,6 +20,35 @@ namespace CSGenio.business
 
             StringBuilder Qresult = new StringBuilder();
             
+			// card_type
+            Qresult = new StringBuilder();
+			            Qresult.AppendLine("if {{{0}}} = \"YC\" then \"YELLOW CARD\" else");
+			            Qresult.AppendLine("if {{{0}}} = \"RC\" then \"RED CARD\" else");
+            Qresult.Append("\"                                              \"");
+            todasArrays.Add("card_type", Qresult.ToString());
+			// match_status
+            Qresult = new StringBuilder();
+			            Qresult.AppendLine("if {{{0}}} = \"SCH\" then \"SCHEDULED\" else");
+			            Qresult.AppendLine("if {{{0}}} = \"LIV\" then \"LIVE\" else");
+			            Qresult.AppendLine("if {{{0}}} = \"FIN\" then \"FINISHED\" else");
+			            Qresult.AppendLine("if {{{0}}} = \"CAN\" then \"CANCELLED\" else");
+            Qresult.Append("\"                                              \"");
+            todasArrays.Add("match_status", Qresult.ToString());
+			// player_position
+            Qresult = new StringBuilder();
+			            Qresult.AppendLine("if {{{0}}} = \"GK\" then \"GOALKEEPER\" else");
+			            Qresult.AppendLine("if {{{0}}} = \"DEF\" then \"DEFENDER\" else");
+			            Qresult.AppendLine("if {{{0}}} = \"MID\" then \"MIDFEILDER\" else");
+			            Qresult.AppendLine("if {{{0}}} = \"FWD\" then \"FORWARD\" else");
+            Qresult.Append("\"                                              \"");
+            todasArrays.Add("player_position", Qresult.ToString());
+			// preferred_foot
+            Qresult = new StringBuilder();
+			            Qresult.AppendLine("if {{{0}}} = \"L\" then \"LEFT\" else");
+			            Qresult.AppendLine("if {{{0}}} = \"R\" then \"RIGHT\" else");
+			            Qresult.AppendLine("if {{{0}}} = \"BTH\" then \"BOTH\" else");
+            Qresult.Append("\"                                              \"");
+            todasArrays.Add("preferred_foot", Qresult.ToString());
 			// s_modpro
             Qresult = new StringBuilder();
 			            Qresult.AppendLine("if {{{0}}} = \"INDIV\" then \"Individual\" else");

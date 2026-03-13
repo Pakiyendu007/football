@@ -21,11 +21,17 @@
   <msg id="coaches" code="COACHES16077">
     <ENUS>coaches</ENUS>
   </msg>
+  <msg id="FORWARD" code="FORWARD37428">
+    <ENUS>FORWARD</ENUS>
+  </msg>
   <msg id="Não responde" code="NAO_RESPONDE33275">
     <ENUS>Não responde</ENUS>
   </msg>
   <msg id="referees" code="REFEREES03665">
     <ENUS>referees</ENUS>
+  </msg>
+  <msg id="PLAYER POSITION" code="PLAYER_POSITION06725">
+    <ENUS>PLAYER POSITION</ENUS>
   </msg>
   <msg id="Manual destination" code="MANUAL_DESTINATION21892">
     <ENUS>Manual destination</ENUS>
@@ -57,6 +63,9 @@
   <msg id="Canceled by" code="CANCELED_BY01167">
     <ENUS>Canceled by</ENUS>
   </msg>
+  <msg id="LIVE" code="LIVE02541">
+    <ENUS>LIVE</ENUS>
+  </msg>
   <msg id="Async process" code="ASYNC_PROCESS56674">
     <ENUS>Async process</ENUS>
   </msg>
@@ -74,6 +83,9 @@
   </msg>
   <msg id="Value" code="VALUE10285">
     <ENUS>Value</ENUS>
+  </msg>
+  <msg id="GOALKEEPER" code="GOALKEEPER42691">
+    <ENUS>GOALKEEPER</ENUS>
   </msg>
   <msg id="Changed on" code="CHANGED_ON19727">
     <ENUS>Changed on</ENUS>
@@ -141,6 +153,9 @@
   <msg id="Cc" code="CC35482">
     <ENUS>Cc</ENUS>
   </msg>
+  <msg id="FINISHED" code="FINISHED25623">
+    <ENUS>FINISHED</ENUS>
+  </msg>
   <msg id="Real time status" code="REAL_TIME_STATUS00476">
     <ENUS>Real time status</ENUS>
   </msg>
@@ -149,6 +164,9 @@
   </msg>
   <msg id="Create a website alert" code="CREATE_A_WEBSITE_ALE02013">
     <ENUS>Create a website alert</ENUS>
+  </msg>
+  <msg id="CARD TYPE" code="CARD_TYPE41025">
+    <ENUS>CARD TYPE</ENUS>
   </msg>
   <msg id="Description" code="DESCRIPTION07383">
     <ENUS>Description</ENUS>
@@ -195,6 +213,9 @@
   <msg id="Sends attachment?" code="SENDS_ATTACHMENT_64661">
     <ENUS>Sends attachment?</ENUS>
   </msg>
+  <msg id="MIDFEILDER" code="MIDFEILDER15633">
+    <ENUS>MIDFEILDER</ENUS>
+  </msg>
   <msg id="My application" code="MY_APPLICATION56216">
     <ENUS>My application</ENUS>
   </msg>
@@ -216,6 +237,9 @@
   <msg id="Start time" code="START_TIME30037">
     <ENUS>Start time</ENUS>
   </msg>
+  <msg id="RED CARD" code="RED_CARD10428">
+    <ENUS>RED CARD</ENUS>
+  </msg>
   <msg id="Horário" code="HORARIO56549">
     <ENUS>Horário</ENUS>
   </msg>
@@ -227,6 +251,9 @@
   </msg>
   <msg id="Sucesso" code="SUCESSO65230">
     <ENUS>Sucesso</ENUS>
+  </msg>
+  <msg id="RIGHT" code="RIGHT52242">
+    <ENUS>RIGHT</ENUS>
   </msg>
   <msg id="Result" code="RESULT40974">
     <ENUS>Result</ENUS>
@@ -257,6 +284,9 @@
   </msg>
   <msg id="Routine" code="ROUTINE58306">
     <ENUS>Routine</ENUS>
+  </msg>
+  <msg id="MATCH STATUS" code="MATCH_STATUS28297">
+    <ENUS>MATCH STATUS</ENUS>
   </msg>
   <msg id="playername" code="PLAYERNAME24447">
     <ENUS>playername</ENUS>
@@ -297,6 +327,12 @@
   <msg id="Last update" code="LAST_UPDATE11909">
     <ENUS>Last update</ENUS>
   </msg>
+  <msg id="PLAYER POSITIONS" code="PLAYER_POSITIONS44103">
+    <ENUS>PLAYER POSITIONS</ENUS>
+  </msg>
+  <msg id="PREFERRED FOOT" code="PREFERRED_FOOT58928">
+    <ENUS>PREFERRED FOOT</ENUS>
+  </msg>
   <msg id="User ID" code="USER_ID13914">
     <ENUS>User ID</ENUS>
   </msg>
@@ -312,6 +348,9 @@
   <msg id="away goals" code="AWAY_GOALS14181">
     <ENUS>away goals</ENUS>
   </msg>
+  <msg id="BOTH" code="BOTH48095">
+    <ENUS>BOTH</ENUS>
+  </msg>
   <msg id="Expiration date" code="EXPIRATION_DATE34293">
     <ENUS>Expiration date</ENUS>
   </msg>
@@ -321,8 +360,14 @@
   <msg id="match date" code="MATCH_DATE48973">
     <ENUS>match date</ENUS>
   </msg>
+  <msg id="SCHEDULED" code="SCHEDULED64233">
+    <ENUS>SCHEDULED</ENUS>
+  </msg>
   <msg id="goals" code="GOALS59839">
     <ENUS>goals</ENUS>
+  </msg>
+  <msg id="DEFENDER" code="DEFENDER58833">
+    <ENUS>DEFENDER</ENUS>
   </msg>
   <msg id="Bcc" code="BCC22049">
     <ENUS>Bcc</ENUS>
@@ -338,6 +383,9 @@
   </msg>
   <msg id="Id" code="ID36840">
     <ENUS>Id</ENUS>
+  </msg>
+  <msg id="LEFT" code="LEFT12364">
+    <ENUS>LEFT</ENUS>
   </msg>
   <msg id="Changed by" code="CHANGED_BY08967">
     <ENUS>Changed by</ENUS>
@@ -399,8 +447,14 @@
   <msg id="Executed by external app" code="EXECUTED_BY_EXTERNAL36156">
     <ENUS>Executed by external app</ENUS>
   </msg>
+  <msg id="YELLOW CARD" code="YELLOW_CARD04777">
+    <ENUS>YELLOW CARD</ENUS>
+  </msg>
   <msg id="Has login?" code="HAS_LOGIN_58044">
     <ENUS>Has login?</ENUS>
+  </msg>
+  <msg id="CANCELLED" code="CANCELLED08999">
+    <ENUS>CANCELLED</ENUS>
   </msg>
   <msg id="Terminado" code="TERMINADO46276">
     <ENUS>Terminado</ENUS>

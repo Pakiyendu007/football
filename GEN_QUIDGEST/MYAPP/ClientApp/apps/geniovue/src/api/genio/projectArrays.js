@@ -108,6 +108,156 @@ export class GroupOption {
 
 /* eslint-enable @typescript-eslint/no-unused-vars */
 /**
+ * The CARD_TYPE array.
+ */
+export class QArrayCard_type
+{
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
+	constructor(fnResources)
+	{
+		this.type = 'C'
+		this.pluralName = 'CARD_TYPE41025'
+		this.singularName = 'CARD_TYPE41025'
+
+		this.elements = [
+			new Option({
+				num: 1,
+				key: 'YC',
+				resourceId: 'YELLOW_CARD04777',
+				fnResources,
+			}),
+			new Option({
+				num: 2,
+				key: 'RC',
+				resourceId: 'RED_CARD10428',
+				fnResources,
+			}),
+		]
+
+	}
+}
+
+/**
+ * The MATCH_STATUS array.
+ */
+export class QArrayMatch_status
+{
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
+	constructor(fnResources)
+	{
+		this.type = 'C'
+		this.pluralName = 'MATCH_STATUS28297'
+		this.singularName = 'MATCH_STATUS28297'
+
+		this.elements = [
+			new Option({
+				num: 1,
+				key: 'SCH',
+				resourceId: 'SCHEDULED64233',
+				fnResources,
+			}),
+			new Option({
+				num: 2,
+				key: 'LIV',
+				resourceId: 'LIVE02541',
+				fnResources,
+			}),
+			new Option({
+				num: 3,
+				key: 'FIN',
+				resourceId: 'FINISHED25623',
+				fnResources,
+			}),
+			new Option({
+				num: 4,
+				key: 'CAN',
+				resourceId: 'CANCELLED08999',
+				fnResources,
+			}),
+		]
+
+	}
+}
+
+/**
+ * The PLAYER_POSITION array.
+ */
+export class QArrayPlayer_position
+{
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
+	constructor(fnResources)
+	{
+		this.type = 'C'
+		this.pluralName = 'PLAYER_POSITIONS44103'
+		this.singularName = 'PLAYER_POSITION06725'
+
+		this.elements = [
+			new Option({
+				num: 1,
+				key: 'GK',
+				resourceId: 'GOALKEEPER42691',
+				fnResources,
+			}),
+			new Option({
+				num: 2,
+				key: 'DEF',
+				resourceId: 'DEFENDER58833',
+				fnResources,
+			}),
+			new Option({
+				num: 3,
+				key: 'MID',
+				resourceId: 'MIDFEILDER15633',
+				fnResources,
+			}),
+			new Option({
+				num: 4,
+				key: 'FWD',
+				resourceId: 'FORWARD37428',
+				fnResources,
+			}),
+		]
+
+	}
+}
+
+/**
+ * The PREFERRED_FOOT array.
+ */
+export class QArrayPreferred_foot
+{
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
+	constructor(fnResources)
+	{
+		this.type = 'C'
+		this.pluralName = 'PREFERRED_FOOT58928'
+		this.singularName = 'PREFERRED_FOOT58928'
+
+		this.elements = [
+			new Option({
+				num: 1,
+				key: 'L',
+				resourceId: 'LEFT12364',
+				fnResources,
+			}),
+			new Option({
+				num: 2,
+				key: 'R',
+				resourceId: 'RIGHT52242',
+				fnResources,
+			}),
+			new Option({
+				num: 3,
+				key: 'BTH',
+				resourceId: 'BOTH48095',
+				fnResources,
+			}),
+		]
+
+	}
+}
+
+/**
  * The s_modpro array.
  */
 export class QArrayS_modpro
@@ -376,6 +526,10 @@ export class QArrayS_tpproc
 
 
 export default {
+	QArrayCard_type,
+	QArrayMatch_status,
+	QArrayPlayer_position,
+	QArrayPreferred_foot,
 	QArrayS_modpro,
 	QArrayS_module,
 	QArrayS_prstat,

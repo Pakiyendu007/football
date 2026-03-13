@@ -138,11 +138,17 @@
   <data name="COACHES16077" xml:space="preserve">
     <value>coaches</value>
   </data>
+  <data name="FORWARD37428" xml:space="preserve">
+    <value>FORWARD</value>
+  </data>
   <data name="NAO_RESPONDE33275" xml:space="preserve">
     <value>Não responde</value>
   </data>
   <data name="REFEREES03665" xml:space="preserve">
     <value>referees</value>
+  </data>
+  <data name="PLAYER_POSITION06725" xml:space="preserve">
+    <value>PLAYER POSITION</value>
   </data>
   <data name="MANUAL_DESTINATION21892" xml:space="preserve">
     <value>Manual destination</value>
@@ -174,6 +180,9 @@
   <data name="CANCELED_BY01167" xml:space="preserve">
     <value>Canceled by</value>
   </data>
+  <data name="LIVE02541" xml:space="preserve">
+    <value>LIVE</value>
+  </data>
   <data name="ASYNC_PROCESS56674" xml:space="preserve">
     <value>Async process</value>
   </data>
@@ -191,6 +200,9 @@
   </data>
   <data name="VALUE10285" xml:space="preserve">
     <value>Value</value>
+  </data>
+  <data name="GOALKEEPER42691" xml:space="preserve">
+    <value>GOALKEEPER</value>
   </data>
   <data name="CHANGED_ON19727" xml:space="preserve">
     <value>Changed on</value>
@@ -258,6 +270,9 @@
   <data name="CC35482" xml:space="preserve">
     <value>Cc</value>
   </data>
+  <data name="FINISHED25623" xml:space="preserve">
+    <value>FINISHED</value>
+  </data>
   <data name="REAL_TIME_STATUS00476" xml:space="preserve">
     <value>Real time status</value>
   </data>
@@ -266,6 +281,9 @@
   </data>
   <data name="CREATE_A_WEBSITE_ALE02013" xml:space="preserve">
     <value>Create a website alert</value>
+  </data>
+  <data name="CARD_TYPE41025" xml:space="preserve">
+    <value>CARD TYPE</value>
   </data>
   <data name="DESCRIPTION07383" xml:space="preserve">
     <value>Description</value>
@@ -312,6 +330,9 @@
   <data name="SENDS_ATTACHMENT_64661" xml:space="preserve">
     <value>Sends attachment?</value>
   </data>
+  <data name="MIDFEILDER15633" xml:space="preserve">
+    <value>MIDFEILDER</value>
+  </data>
   <data name="MY_APPLICATION56216" xml:space="preserve">
     <value>My application</value>
   </data>
@@ -333,6 +354,9 @@
   <data name="START_TIME30037" xml:space="preserve">
     <value>Start time</value>
   </data>
+  <data name="RED_CARD10428" xml:space="preserve">
+    <value>RED CARD</value>
+  </data>
   <data name="HORARIO56549" xml:space="preserve">
     <value>Horário</value>
   </data>
@@ -344,6 +368,9 @@
   </data>
   <data name="SUCESSO65230" xml:space="preserve">
     <value>Sucesso</value>
+  </data>
+  <data name="RIGHT52242" xml:space="preserve">
+    <value>RIGHT</value>
   </data>
   <data name="RESULT40974" xml:space="preserve">
     <value>Result</value>
@@ -374,6 +401,9 @@
   </data>
   <data name="ROUTINE58306" xml:space="preserve">
     <value>Routine</value>
+  </data>
+  <data name="MATCH_STATUS28297" xml:space="preserve">
+    <value>MATCH STATUS</value>
   </data>
   <data name="PLAYERNAME24447" xml:space="preserve">
     <value>playername</value>
@@ -414,6 +444,12 @@
   <data name="LAST_UPDATE11909" xml:space="preserve">
     <value>Last update</value>
   </data>
+  <data name="PLAYER_POSITIONS44103" xml:space="preserve">
+    <value>PLAYER POSITIONS</value>
+  </data>
+  <data name="PREFERRED_FOOT58928" xml:space="preserve">
+    <value>PREFERRED FOOT</value>
+  </data>
   <data name="USER_ID13914" xml:space="preserve">
     <value>User ID</value>
   </data>
@@ -429,6 +465,9 @@
   <data name="AWAY_GOALS14181" xml:space="preserve">
     <value>away goals</value>
   </data>
+  <data name="BOTH48095" xml:space="preserve">
+    <value>BOTH</value>
+  </data>
   <data name="EXPIRATION_DATE34293" xml:space="preserve">
     <value>Expiration date</value>
   </data>
@@ -438,8 +477,14 @@
   <data name="MATCH_DATE48973" xml:space="preserve">
     <value>match date</value>
   </data>
+  <data name="SCHEDULED64233" xml:space="preserve">
+    <value>SCHEDULED</value>
+  </data>
   <data name="GOALS59839" xml:space="preserve">
     <value>goals</value>
+  </data>
+  <data name="DEFENDER58833" xml:space="preserve">
+    <value>DEFENDER</value>
   </data>
   <data name="BCC22049" xml:space="preserve">
     <value>Bcc</value>
@@ -455,6 +500,9 @@
   </data>
   <data name="ID36840" xml:space="preserve">
     <value>Id</value>
+  </data>
+  <data name="LEFT12364" xml:space="preserve">
+    <value>LEFT</value>
   </data>
   <data name="CHANGED_BY08967" xml:space="preserve">
     <value>Changed by</value>
@@ -516,8 +564,14 @@
   <data name="EXECUTED_BY_EXTERNAL36156" xml:space="preserve">
     <value>Executed by external app</value>
   </data>
+  <data name="YELLOW_CARD04777" xml:space="preserve">
+    <value>YELLOW CARD</value>
+  </data>
   <data name="HAS_LOGIN_58044" xml:space="preserve">
     <value>Has login?</value>
+  </data>
+  <data name="CANCELLED08999" xml:space="preserve">
+    <value>CANCELLED</value>
   </data>
   <data name="TERMINADO46276" xml:space="preserve">
     <value>Terminado</value>
