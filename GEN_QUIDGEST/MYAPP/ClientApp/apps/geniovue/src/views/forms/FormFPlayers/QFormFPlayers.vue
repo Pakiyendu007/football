@@ -108,10 +108,10 @@
 							:loading="controls.F_PLAYERS__PLAYERS__POSITION.props.loading"
 							:reporting-mode-on="reportingModeCAV"
 							:suggestion-mode-on="suggestionModeOn">
-							<q-numeric-input
-								v-if="controls.F_PLAYERS__PLAYERS__POSITION.isVisible"
+							<q-text-field
 								v-bind="controls.F_PLAYERS__PLAYERS__POSITION.props"
-								@update:model-value="model.ValPosition.fnUpdateValue" />
+								@blur="onBlur(controls.F_PLAYERS__PLAYERS__POSITION, model.ValPosition.value)"
+								@change="model.ValPosition.fnUpdateValueOnChange" />
 						</base-input-structure>
 					</q-col>
 					<q-col
@@ -534,7 +534,7 @@
 				},
 
 				controls: {
-					F_PLAYERS__PLAYERS__POSITION: new fieldControlClass.NumberControl({
+					F_PLAYERS__PLAYERS__POSITION: new fieldControlClass.StringControl({
 						modelField: 'ValPosition',
 						valueChangeEvent: 'fieldChange:players.position',
 						id: 'F_PLAYERS__PLAYERS__POSITION',
@@ -543,8 +543,7 @@
 						label: computed(() => this.Resources.POSITION56645),
 						placeholder: '',
 						labelPosition: computed(() => this.labelAlignment.topleft),
-						maxIntegers: 5,
-						maxDecimals: 0,
+						maxLength: 50,
 						controlLimits: [
 						],
 					}, this),

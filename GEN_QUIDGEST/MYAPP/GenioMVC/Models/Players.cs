@@ -23,10 +23,9 @@ namespace GenioMVC.Models
 		public CSGenioAplayers klass { get { return baseklass as CSGenioAplayers; } set { baseklass = value; } }
 
 		[DisplayName("position")]
-		/// <summary>Field : "position" Tipo: "N" Formula:  ""</summary>
+		/// <summary>Field : "position" Tipo: "C" Formula:  ""</summary>
 		[ShouldSerialize("Players.ValPosition")]
-		[NumericAttribute(0)]
-		public decimal? ValPosition { get { return Convert.ToDecimal(GenFunctions.RoundQG(klass.ValPosition, 0)); } set { klass.ValPosition = Convert.ToDecimal(value); } }
+		public string ValPosition { get { return klass.ValPosition; } set { klass.ValPosition = value; } }
 
 		[Key]
 		/// <summary>Field : "" Tipo: "+" Formula:  ""</summary>

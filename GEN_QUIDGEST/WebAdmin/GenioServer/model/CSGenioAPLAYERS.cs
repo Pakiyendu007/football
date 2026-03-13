@@ -44,11 +44,10 @@ namespace CSGenio.business
 			List<ByAreaArguments> argumentsListByArea;
 #pragma warning restore CS0168, S1481 // Variable is declared but never used
 			//- - - - - - - - - - - - - - - - - - -
-			Qfield = new Field(info.Alias, "position", FieldType.NUMERIC);
+			Qfield = new Field(info.Alias, "position", FieldType.TEXT);
 			Qfield.FieldDescription = "position";
-			Qfield.FieldSize =  5;
+			Qfield.FieldSize =  50;
 			Qfield.MQueue = false;
-			Qfield.IntegerDigits = 5;
 			Qfield.CavDesignation = "POSITION56645";
 
 			Qfield.Dupmsg = "";
@@ -259,14 +258,14 @@ namespace CSGenio.business
 			return informacao;
 		}
 
-		/// <summary>Field : "position" Tipo: "N" Formula:  ""</summary>
+		/// <summary>Field : "position" Tipo: "C" Formula:  ""</summary>
 		public static FieldRef FldPosition { get { return m_fldPosition; } }
 		private static FieldRef m_fldPosition = new FieldRef("players", "position");
 
-		/// <summary>Field : "position" Tipo: "N" Formula:  ""</summary>
-		public decimal ValPosition
+		/// <summary>Field : "position" Tipo: "C" Formula:  ""</summary>
+		public string ValPosition
 		{
-			get { return (decimal)returnValueField(FldPosition); }
+			get { return (string)returnValueField(FldPosition); }
 			set { insertNameValueField(FldPosition, value); }
 		}
 

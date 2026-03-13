@@ -37,9 +37,9 @@ namespace GenioMVC.ViewModels.Players
 
 		#endregion
 		/// <summary>
-		/// Title: "position" | Type: "N"
+		/// Title: "position" | Type: "C"
 		/// </summary>
-		public decimal? ValPosition { get; set; }
+		public string ValPosition { get; set; }
 		/// <summary>
 		/// Title: "player id" | Type: "N"
 		/// </summary>
@@ -189,7 +189,7 @@ namespace GenioMVC.ViewModels.Players
 			try
 			{
 				ValTeamid = ViewModelConversion.ToString(m.ValTeamid);
-				ValPosition = ViewModelConversion.ToNumeric(m.ValPosition);
+				ValPosition = ViewModelConversion.ToString(m.ValPosition);
 				ValPlayerid = ViewModelConversion.ToNumeric(m.ValPlayerid);
 				ValPlayername = ViewModelConversion.ToString(m.ValPlayername);
 				ValAge = ViewModelConversion.ToNumeric(m.ValAge);
@@ -220,7 +220,7 @@ namespace GenioMVC.ViewModels.Players
 			try
 			{
 				m.ValTeamid = ViewModelConversion.ToString(ValTeamid);
-				m.ValPosition = ViewModelConversion.ToNumeric(ValPosition);
+				m.ValPosition = ViewModelConversion.ToString(ValPosition);
 				m.ValPlayerid = ViewModelConversion.ToNumeric(ValPlayerid);
 				m.ValPlayername = ViewModelConversion.ToString(ValPlayername);
 				m.ValAge = ViewModelConversion.ToNumeric(ValAge);
@@ -253,7 +253,7 @@ namespace GenioMVC.ViewModels.Players
 						this.ValTeamid = ViewModelConversion.ToString(_value);
 						break;
 					case "players.position":
-						this.ValPosition = ViewModelConversion.ToNumeric(_value);
+						this.ValPosition = ViewModelConversion.ToString(_value);
 						break;
 					case "players.playerid":
 						this.ValPlayerid = ViewModelConversion.ToNumeric(_value);
@@ -390,6 +390,7 @@ namespace GenioMVC.ViewModels.Players
 		{
 			CrudViewModelFieldValidator validator = new(m_userContext.User.Language);
 
+			validator.StringLength("ValPosition", Resources.Resources.POSITION56645, ValPosition, 50);
 			validator.StringLength("ValPlayername", Resources.Resources.PLAYERNAME24447, ValPlayername, 50);
 
 
@@ -622,7 +623,7 @@ namespace GenioMVC.ViewModels.Players
 			return identifier switch
 			{
 				"players.teamid" => ViewModelConversion.ToString(modelValue),
-				"players.position" => ViewModelConversion.ToNumeric(modelValue),
+				"players.position" => ViewModelConversion.ToString(modelValue),
 				"players.playerid" => ViewModelConversion.ToNumeric(modelValue),
 				"players.playername" => ViewModelConversion.ToString(modelValue),
 				"players.age" => ViewModelConversion.ToNumeric(modelValue),

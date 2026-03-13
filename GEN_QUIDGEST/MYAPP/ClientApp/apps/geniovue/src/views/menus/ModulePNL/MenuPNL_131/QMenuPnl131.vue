@@ -179,15 +179,14 @@
 								scrollData: 30,
 								export: 1,
 							}, computed(() => vm.model), computed(() => vm.internalEvents)),
-							new listColumnTypes.NumericColumn({
+							new listColumnTypes.TextColumn({
 								order: 4,
 								name: 'ValPosition',
 								area: 'PLAYERS',
 								field: 'POSITION',
 								label: computed(() => this.Resources.POSITION56645),
+								dataLength: 50,
 								scrollData: 5,
-								maxDigits: 5,
-								decimalPlaces: 0,
 								export: 1,
 							}, computed(() => vm.model), computed(() => vm.internalEvents)),
 							new listColumnTypes.NumericColumn({

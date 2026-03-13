@@ -65,13 +65,12 @@ export default class ViewModel extends FormViewModelBase
 		this.stopWatchers.push(watch(() => this.ValTeamid.value, (newValue, oldValue) => this.onUpdate('players.teamid', this.ValTeamid, newValue, oldValue)))
 
 		/** The remaining form fields. */
-		this.ValPosition = reactive(new modelFieldType.Number({
+		this.ValPosition = reactive(new modelFieldType.String({
 			id: 'ValPosition',
 			originId: 'ValPosition',
 			area: 'PLAYERS',
 			field: 'POSITION',
-			maxDigits: 5,
-			decimalDigits: 0,
+			maxLength: 50,
 			description: computed(() => this.Resources.POSITION56645),
 		}).cloneFrom(values?.ValPosition))
 		this.stopWatchers.push(watch(() => this.ValPosition.value, (newValue, oldValue) => this.onUpdate('players.position', this.ValPosition, newValue, oldValue)))

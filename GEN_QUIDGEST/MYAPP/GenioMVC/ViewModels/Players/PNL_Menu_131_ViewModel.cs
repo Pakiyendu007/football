@@ -149,7 +149,7 @@ namespace GenioMVC.ViewModels.Players
 				new Exports.QColumn(CSGenioAmatches.FldMatchid, FieldType.NUMERIC, Resources.Resources.MATCH_ID16862, 8, 0, true),
 				new Exports.QColumn(CSGenioAplayers.FldAge, FieldType.NUMERIC, Resources.Resources.AGE26077, 5, 0, true),
 				new Exports.QColumn(CSGenioAplayers.FldPlayername, FieldType.TEXT, Resources.Resources.PLAYERNAME24447, 30, 0, true),
-				new Exports.QColumn(CSGenioAplayers.FldPosition, FieldType.NUMERIC, Resources.Resources.POSITION56645, 5, 0, true),
+				new Exports.QColumn(CSGenioAplayers.FldPosition, FieldType.TEXT, Resources.Resources.POSITION56645, 5, 0, true),
 				new Exports.QColumn(CSGenioAplayers.FldPlayerid, FieldType.NUMERIC, Resources.Resources.PLAYER_ID62777, 5, 0, true),
 			];
 		}
@@ -541,7 +541,7 @@ namespace GenioMVC.ViewModels.Players
 			new TableSearchColumn("Matches_ValMatchid", CSGenioAmatches.FldMatchid, typeof(decimal?)),
 			new TableSearchColumn("ValAge", CSGenioAplayers.FldAge, typeof(decimal?)),
 			new TableSearchColumn("ValPlayername", CSGenioAplayers.FldPlayername, typeof(string)),
-			new TableSearchColumn("ValPosition", CSGenioAplayers.FldPosition, typeof(decimal?)),
+			new TableSearchColumn("ValPosition", CSGenioAplayers.FldPosition, typeof(string)),
 			new TableSearchColumn("ValPlayerid", CSGenioAplayers.FldPlayerid, typeof(decimal?), defaultSearch : true),
 		];
 	}
