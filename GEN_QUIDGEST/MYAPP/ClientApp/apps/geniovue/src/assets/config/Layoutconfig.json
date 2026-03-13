@@ -193,6 +193,7 @@
 			"Image",
 			"Text"
 		],
+		"chosen": "Text",
 		"default": "Text"
 	}
 }
