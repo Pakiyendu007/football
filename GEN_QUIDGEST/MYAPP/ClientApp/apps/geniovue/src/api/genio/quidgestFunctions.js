@@ -1176,7 +1176,7 @@ const MYAPP_THEME_VARIABLES = {
 	'$font-family-sans-serif': "\"Lato\", Roboto, \"Helvetica Neue\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
 	'$font-headings': "$font-family-sans-serif",
 	'$headings-text-transform': "uppercase",
-	'$primary': "#585C5E",
+	'$primary': "#0EB5EE",
 	'$secondary': "#001d31",
 	'$highlight': "#D47340",
 	'$action-focus-width': "2px",

@@ -9,14 +9,14 @@ const framework = createFramework({
 				mode: 'light',
 				colors: {
 					highlight: '#D47340',
-					primary: '#585C5E',
+					primary: '#0EB5EE',
 				}
 			}
 		]
 	},
 	defaults: {
 		QIconSvg: {
-			bundle: 'Content/svgbundle.svg?v=16'
+			bundle: 'Content/svgbundle.svg?v=17'
 		},
 		QCollapsible: {
 			icons: {
