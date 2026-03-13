@@ -54,6 +54,59 @@ namespace CSGenio.business
 			info.RegisterFieldDB(Qfield);
 
 			//- - - - - - - - - - - - - - - - - - -
+			Qfield = new Field(info.Alias, "refereeid", FieldType.NUMERIC);
+			Qfield.FieldDescription = "referee id";
+			Qfield.FieldSize =  8;
+			Qfield.MQueue = false;
+			Qfield.IntegerDigits = 8;
+			Qfield.CavDesignation = "REFEREE_ID28621";
+
+			Qfield.Dupmsg = "";
+			info.RegisterFieldDB(Qfield);
+
+			//- - - - - - - - - - - - - - - - - - -
+			Qfield = new Field(info.Alias, "refereename", FieldType.TEXT);
+			Qfield.FieldDescription = "referee name";
+			Qfield.FieldSize =  50;
+			Qfield.MQueue = false;
+			Qfield.CavDesignation = "REFEREE_NAME11471";
+
+			Qfield.Dupmsg = "";
+			info.RegisterFieldDB(Qfield);
+
+			//- - - - - - - - - - - - - - - - - - -
+			Qfield = new Field(info.Alias, "age", FieldType.NUMERIC);
+			Qfield.FieldDescription = "age";
+			Qfield.FieldSize =  10;
+			Qfield.MQueue = false;
+			Qfield.IntegerDigits = 10;
+			Qfield.CavDesignation = "AGE26077";
+
+			Qfield.Dupmsg = "";
+			info.RegisterFieldDB(Qfield);
+
+			//- - - - - - - - - - - - - - - - - - -
+			Qfield = new Field(info.Alias, "nationality", FieldType.TEXT);
+			Qfield.FieldDescription = "nationality";
+			Qfield.FieldSize =  50;
+			Qfield.MQueue = false;
+			Qfield.CavDesignation = "NATIONALITY53539";
+
+			Qfield.Dupmsg = "";
+			info.RegisterFieldDB(Qfield);
+
+			//- - - - - - - - - - - - - - - - - - -
+			Qfield = new Field(info.Alias, "experienceyears", FieldType.NUMERIC);
+			Qfield.FieldDescription = "experience years";
+			Qfield.FieldSize =  8;
+			Qfield.MQueue = false;
+			Qfield.IntegerDigits = 8;
+			Qfield.CavDesignation = "EXPERIENCE_YEARS16336";
+
+			Qfield.Dupmsg = "";
+			info.RegisterFieldDB(Qfield);
+
+			//- - - - - - - - - - - - - - - - - - -
 			Qfield = new Field(info.Alias, "zzstate", FieldType.INTEGER);
 			Qfield.FieldDescription = "Estado da ficha";
 			info.RegisterFieldDB(Qfield);
@@ -119,7 +172,7 @@ namespace CSGenio.business
 			info.ShadowTabKeyName="";
 
 			info.PrimaryKeyName="codreferees";
-			info.HumanKeyName="";
+			info.HumanKeyName="age,".TrimEnd(',');
 			info.Alias="referees";
 			info.IsDomain = true;
 			info.PersistenceType = PersistenceType.Database;
@@ -209,6 +262,61 @@ namespace CSGenio.business
 		{
 			get { return (string)returnValueField(FldCodreferees); }
 			set { insertNameValueField(FldCodreferees, value); }
+		}
+
+		/// <summary>Field : "referee id" Tipo: "N" Formula:  ""</summary>
+		public static FieldRef FldRefereeid { get { return m_fldRefereeid; } }
+		private static FieldRef m_fldRefereeid = new FieldRef("referees", "refereeid");
+
+		/// <summary>Field : "referee id" Tipo: "N" Formula:  ""</summary>
+		public decimal ValRefereeid
+		{
+			get { return (decimal)returnValueField(FldRefereeid); }
+			set { insertNameValueField(FldRefereeid, value); }
+		}
+
+		/// <summary>Field : "referee name" Tipo: "C" Formula:  ""</summary>
+		public static FieldRef FldRefereename { get { return m_fldRefereename; } }
+		private static FieldRef m_fldRefereename = new FieldRef("referees", "refereename");
+
+		/// <summary>Field : "referee name" Tipo: "C" Formula:  ""</summary>
+		public string ValRefereename
+		{
+			get { return (string)returnValueField(FldRefereename); }
+			set { insertNameValueField(FldRefereename, value); }
+		}
+
+		/// <summary>Field : "age" Tipo: "N" Formula:  ""</summary>
+		public static FieldRef FldAge { get { return m_fldAge; } }
+		private static FieldRef m_fldAge = new FieldRef("referees", "age");
+
+		/// <summary>Field : "age" Tipo: "N" Formula:  ""</summary>
+		public decimal ValAge
+		{
+			get { return (decimal)returnValueField(FldAge); }
+			set { insertNameValueField(FldAge, value); }
+		}
+
+		/// <summary>Field : "nationality" Tipo: "C" Formula:  ""</summary>
+		public static FieldRef FldNationality { get { return m_fldNationality; } }
+		private static FieldRef m_fldNationality = new FieldRef("referees", "nationality");
+
+		/// <summary>Field : "nationality" Tipo: "C" Formula:  ""</summary>
+		public string ValNationality
+		{
+			get { return (string)returnValueField(FldNationality); }
+			set { insertNameValueField(FldNationality, value); }
+		}
+
+		/// <summary>Field : "experience years" Tipo: "N" Formula:  ""</summary>
+		public static FieldRef FldExperienceyears { get { return m_fldExperienceyears; } }
+		private static FieldRef m_fldExperienceyears = new FieldRef("referees", "experienceyears");
+
+		/// <summary>Field : "experience years" Tipo: "N" Formula:  ""</summary>
+		public decimal ValExperienceyears
+		{
+			get { return (decimal)returnValueField(FldExperienceyears); }
+			set { insertNameValueField(FldExperienceyears, value); }
 		}
 
 		/// <summary>Field : "ZZSTATE" Type: "INT" Formula:  ""</summary>
@@ -308,7 +416,7 @@ namespace CSGenio.business
 		// USE /[MANUAL PNL TABAUX REFEREES]/
 
  
-  
+       
 
 	}
 }

@@ -129,6 +129,9 @@
 	<data name="RESULT_MESSAGE40830" xml:space="preserve">
 		<value>Result message</value>
 	</data>
+	<data name="REFEREE_ID28621" xml:space="preserve">
+		<value>referee id</value>
+	</data>
 	<data name="USER_AUTHORIZATION53599" xml:space="preserve">
 		<value>User Authorization</value>
 	</data>
@@ -197,6 +200,9 @@
 	</data>
 	<data name="PASSWORD_DATE16593" xml:space="preserve">
 		<value>Password date</value>
+	</data>
+	<data name="EXPERIENCE_YEARS16336" xml:space="preserve">
+		<value>experience years</value>
 	</data>
 	<data name="NOTIFICATION_EMAIL_S37352" xml:space="preserve">
 		<value>Notification Email Signatures</value>
@@ -375,6 +381,9 @@
 	<data name="MODULE42049" xml:space="preserve">
 		<value>Module</value>
 	</data>
+	<data name="NATIONALITY53539" xml:space="preserve">
+		<value>nationality</value>
+	</data>
 	<data name="ADMINISTRADOR57294" xml:space="preserve">
 		<value>Administrador</value>
 	</data>
@@ -461,6 +470,9 @@
 	</data>
 	<data name="PASSWORDS52247" xml:space="preserve">
 		<value>Passwords</value>
+	</data>
+	<data name="REFEREE_NAME11471" xml:space="preserve">
+		<value>referee name</value>
 	</data>
 	<data name="LOGIN_ATTEMPTS62337" xml:space="preserve">
 		<value>Login attempts</value>

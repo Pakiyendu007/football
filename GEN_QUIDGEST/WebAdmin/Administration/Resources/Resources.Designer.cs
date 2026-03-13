@@ -97,6 +97,15 @@ namespace Administration.Resources {
         }
 
         /// <summary>
+        ///   Looks up a localized string similar to "referee id"
+        /// </summary>
+        public static string REFEREE_ID28621 {
+            get {
+                return ResourceManager.GetString("REFEREE_ID28621", resourceCulture);
+            }
+        }
+
+        /// <summary>
         ///   Looks up a localized string similar to "User Authorization"
         /// </summary>
         public static string USER_AUTHORIZATION53599 {
@@ -300,6 +309,15 @@ namespace Administration.Resources {
         public static string PASSWORD_DATE16593 {
             get {
                 return ResourceManager.GetString("PASSWORD_DATE16593", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "experience years"
+        /// </summary>
+        public static string EXPERIENCE_YEARS16336 {
+            get {
+                return ResourceManager.GetString("EXPERIENCE_YEARS16336", resourceCulture);
             }
         }
 
@@ -835,6 +853,15 @@ namespace Administration.Resources {
         }
 
         /// <summary>
+        ///   Looks up a localized string similar to "nationality"
+        /// </summary>
+        public static string NATIONALITY53539 {
+            get {
+                return ResourceManager.GetString("NATIONALITY53539", resourceCulture);
+            }
+        }
+
+        /// <summary>
         ///   Looks up a localized string similar to "Administrador"
         /// </summary>
         public static string ADMINISTRADOR57294 {
@@ -1092,6 +1119,15 @@ namespace Administration.Resources {
         public static string PASSWORDS52247 {
             get {
                 return ResourceManager.GetString("PASSWORDS52247", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "referee name"
+        /// </summary>
+        public static string REFEREE_NAME11471 {
+            get {
+                return ResourceManager.GetString("REFEREE_NAME11471", resourceCulture);
             }
         }
 

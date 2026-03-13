@@ -27,6 +27,34 @@ namespace GenioMVC.Models
 		[ShouldSerialize("Referees.ValCodreferees")]
 		public string ValCodreferees { get { return klass.ValCodreferees; } set { klass.ValCodreferees = value; } }
 
+		[DisplayName("referee id")]
+		/// <summary>Field : "referee id" Tipo: "N" Formula:  ""</summary>
+		[ShouldSerialize("Referees.ValRefereeid")]
+		[NumericAttribute(0)]
+		public decimal? ValRefereeid { get { return Convert.ToDecimal(GenFunctions.RoundQG(klass.ValRefereeid, 0)); } set { klass.ValRefereeid = Convert.ToDecimal(value); } }
+
+		[DisplayName("referee name")]
+		/// <summary>Field : "referee name" Tipo: "C" Formula:  ""</summary>
+		[ShouldSerialize("Referees.ValRefereename")]
+		public string ValRefereename { get { return klass.ValRefereename; } set { klass.ValRefereename = value; } }
+
+		[DisplayName("age")]
+		/// <summary>Field : "age" Tipo: "N" Formula:  ""</summary>
+		[ShouldSerialize("Referees.ValAge")]
+		[NumericAttribute(0)]
+		public decimal? ValAge { get { return Convert.ToDecimal(GenFunctions.RoundQG(klass.ValAge, 0)); } set { klass.ValAge = Convert.ToDecimal(value); } }
+
+		[DisplayName("nationality")]
+		/// <summary>Field : "nationality" Tipo: "C" Formula:  ""</summary>
+		[ShouldSerialize("Referees.ValNationality")]
+		public string ValNationality { get { return klass.ValNationality; } set { klass.ValNationality = value; } }
+
+		[DisplayName("experience years")]
+		/// <summary>Field : "experience years" Tipo: "N" Formula:  ""</summary>
+		[ShouldSerialize("Referees.ValExperienceyears")]
+		[NumericAttribute(0)]
+		public decimal? ValExperienceyears { get { return Convert.ToDecimal(GenFunctions.RoundQG(klass.ValExperienceyears, 0)); } set { klass.ValExperienceyears = Convert.ToDecimal(value); } }
+
 		[DisplayName("ZZSTATE")]
 		[ShouldSerialize("Referees.ValZzstate")]
 		/// <summary>Field: "ZZSTATE", Type: "INT", Formula: ""</summary>

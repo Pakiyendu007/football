@@ -12,6 +12,9 @@
   <msg id="Result message" code="RESULT_MESSAGE40830">
     <ENUS>Result message</ENUS>
   </msg>
+  <msg id="referee id" code="REFEREE_ID28621">
+    <ENUS>referee id</ENUS>
+  </msg>
   <msg id="User Authorization" code="USER_AUTHORIZATION53599">
     <ENUS>User Authorization</ENUS>
   </msg>
@@ -80,6 +83,9 @@
   </msg>
   <msg id="Password date" code="PASSWORD_DATE16593">
     <ENUS>Password date</ENUS>
+  </msg>
+  <msg id="experience years" code="EXPERIENCE_YEARS16336">
+    <ENUS>experience years</ENUS>
   </msg>
   <msg id="Notification Email Signatures" code="NOTIFICATION_EMAIL_S37352">
     <ENUS>Notification Email Signatures</ENUS>
@@ -258,6 +264,9 @@
   <msg id="Module" code="MODULE42049">
     <ENUS>Module</ENUS>
   </msg>
+  <msg id="nationality" code="NATIONALITY53539">
+    <ENUS>nationality</ENUS>
+  </msg>
   <msg id="Administrador" code="ADMINISTRADOR57294">
     <ENUS>Administrador</ENUS>
   </msg>
@@ -344,6 +353,9 @@
   </msg>
   <msg id="Passwords" code="PASSWORDS52247">
     <ENUS>Passwords</ENUS>
+  </msg>
+  <msg id="referee name" code="REFEREE_NAME11471">
+    <ENUS>referee name</ENUS>
   </msg>
   <msg id="Login attempts" code="LOGIN_ATTEMPTS62337">
     <ENUS>Login attempts</ENUS>
