@@ -349,6 +349,15 @@ namespace Administration.Resources {
         }
 
         /// <summary>
+        ///   Looks up a localized string similar to "Cancelar"
+        /// </summary>
+        public static string CANCELAR49513 {
+            get {
+                return ResourceManager.GetString("CANCELAR49513", resourceCulture);
+            }
+        }
+
+        /// <summary>
         ///   Looks up a localized string similar to "experience years"
         /// </summary>
         public static string EXPERIENCE_YEARS16336 {
@@ -1033,6 +1042,15 @@ namespace Administration.Resources {
         }
 
         /// <summary>
+        ///   Looks up a localized string similar to "Gravar"
+        /// </summary>
+        public static string GRAVAR45301 {
+            get {
+                return ResourceManager.GetString("GRAVAR45301", resourceCulture);
+            }
+        }
+
+        /// <summary>
         ///   Looks up a localized string similar to "Last update"
         /// </summary>
         public static string LAST_UPDATE11909 {
@@ -1555,15 +1573,6 @@ namespace Administration.Resources {
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "Cancelar"
-        /// </summary>
-        public static string CANCELAR49513 {
-            get {
-                return ResourceManager.GetString("CANCELAR49513", resourceCulture);
-            }
-        }
-
-        /// <summary>
         ///   Looks up a localized string similar to "consulta"
         /// </summary>
         public static string CONSULTA23186 {
@@ -1686,15 +1695,6 @@ namespace Administration.Resources {
         public static string FORM54242 {
             get {
                 return ResourceManager.GetString("FORM54242", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Gravar"
-        /// </summary>
-        public static string GRAVAR45301 {
-            get {
-                return ResourceManager.GetString("GRAVAR45301", resourceCulture);
             }
         }
 

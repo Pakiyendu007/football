@@ -96,6 +96,59 @@
 			data-key="F_TEAM"
 			:data-loading="!formInitialDataLoaded || !isActiveForm">
 			<template v-if="formControl.initialized && showFormBody">
+				<q-row v-if="controls.F_TEAM__AWAYTEAM__TEAMID.isVisible || controls.F_TEAM__AWAYTEAM__TEAMNAME.isVisible || controls.F_TEAM__AWAYTEAM__CITY.isVisible">
+					<q-col
+						v-if="controls.F_TEAM__AWAYTEAM__TEAMID.isVisible"
+						cols="auto">
+						<base-input-structure
+							v-if="controls.F_TEAM__AWAYTEAM__TEAMID.isVisible"
+							class="i-text"
+							v-bind="controls.F_TEAM__AWAYTEAM__TEAMID"
+							v-on="controls.F_TEAM__AWAYTEAM__TEAMID.handlers"
+							:loading="controls.F_TEAM__AWAYTEAM__TEAMID.props.loading"
+							:reporting-mode-on="reportingModeCAV"
+							:suggestion-mode-on="suggestionModeOn">
+							<q-numeric-input
+								v-if="controls.F_TEAM__AWAYTEAM__TEAMID.isVisible"
+								v-bind="controls.F_TEAM__AWAYTEAM__TEAMID.props"
+								@update:model-value="model.ValTeamid.fnUpdateValue" />
+						</base-input-structure>
+					</q-col>
+					<q-col
+						v-if="controls.F_TEAM__AWAYTEAM__TEAMNAME.isVisible"
+						cols="auto">
+						<base-input-structure
+							v-if="controls.F_TEAM__AWAYTEAM__TEAMNAME.isVisible"
+							class="i-text"
+							v-bind="controls.F_TEAM__AWAYTEAM__TEAMNAME"
+							v-on="controls.F_TEAM__AWAYTEAM__TEAMNAME.handlers"
+							:loading="controls.F_TEAM__AWAYTEAM__TEAMNAME.props.loading"
+							:reporting-mode-on="reportingModeCAV"
+							:suggestion-mode-on="suggestionModeOn">
+							<q-text-field
+								v-bind="controls.F_TEAM__AWAYTEAM__TEAMNAME.props"
+								@blur="onBlur(controls.F_TEAM__AWAYTEAM__TEAMNAME, model.ValTeamname.value)"
+								@change="model.ValTeamname.fnUpdateValueOnChange" />
+						</base-input-structure>
+					</q-col>
+					<q-col
+						v-if="controls.F_TEAM__AWAYTEAM__CITY.isVisible"
+						cols="auto">
+						<base-input-structure
+							v-if="controls.F_TEAM__AWAYTEAM__CITY.isVisible"
+							class="i-text"
+							v-bind="controls.F_TEAM__AWAYTEAM__CITY"
+							v-on="controls.F_TEAM__AWAYTEAM__CITY.handlers"
+							:loading="controls.F_TEAM__AWAYTEAM__CITY.props.loading"
+							:reporting-mode-on="reportingModeCAV"
+							:suggestion-mode-on="suggestionModeOn">
+							<q-text-field
+								v-bind="controls.F_TEAM__AWAYTEAM__CITY.props"
+								@blur="onBlur(controls.F_TEAM__AWAYTEAM__CITY, model.ValCity.value)"
+								@change="model.ValCity.fnUpdateValueOnChange" />
+						</base-input-structure>
+					</q-col>
+				</q-row>
 			</template>
 		</q-container>
 	</teleport>

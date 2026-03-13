@@ -96,6 +96,86 @@
 			data-key="F_GOALS"
 			:data-loading="!formInitialDataLoaded || !isActiveForm">
 			<template v-if="formControl.initialized && showFormBody">
+				<q-row v-if="controls.F_GOALS_GOALSGOALSID_.isVisible">
+					<q-col
+						v-if="controls.F_GOALS_GOALSGOALSID_.isVisible"
+						cols="auto">
+						<base-input-structure
+							v-if="controls.F_GOALS_GOALSGOALSID_.isVisible"
+							class="i-text"
+							v-bind="controls.F_GOALS_GOALSGOALSID_"
+							v-on="controls.F_GOALS_GOALSGOALSID_.handlers"
+							:loading="controls.F_GOALS_GOALSGOALSID_.props.loading"
+							:reporting-mode-on="reportingModeCAV"
+							:suggestion-mode-on="suggestionModeOn">
+							<q-numeric-input
+								v-if="controls.F_GOALS_GOALSGOALSID_.isVisible"
+								v-bind="controls.F_GOALS_GOALSGOALSID_.props"
+								@update:model-value="model.ValGoalsid.fnUpdateValue" />
+						</base-input-structure>
+					</q-col>
+				</q-row>
+				<q-row v-if="controls.F_GOALS__MATCHES__MATCHID.isVisible || controls.F_GOALS__PLAYERS__PLAYERID.isVisible || controls.F_GOALS_GOALSMINUTE__.isVisible">
+					<q-col
+						v-if="controls.F_GOALS__MATCHES__MATCHID.isVisible"
+						cols="auto">
+						<base-input-structure
+							v-if="controls.F_GOALS__MATCHES__MATCHID.isVisible"
+							class="i-text"
+							v-bind="controls.F_GOALS__MATCHES__MATCHID"
+							v-on="controls.F_GOALS__MATCHES__MATCHID.handlers"
+							:loading="controls.F_GOALS__MATCHES__MATCHID.props.loading"
+							:reporting-mode-on="reportingModeCAV"
+							:suggestion-mode-on="suggestionModeOn">
+							<q-lookup
+								v-if="controls.F_GOALS__MATCHES__MATCHID.isVisible"
+								v-bind="controls.F_GOALS__MATCHES__MATCHID.props"
+								v-on="controls.F_GOALS__MATCHES__MATCHID.handlers" />
+							<q-see-more-f-goals-matches-matchid
+								v-if="controls.F_GOALS__MATCHES__MATCHID.seeMoreIsVisible"
+								v-bind="controls.F_GOALS__MATCHES__MATCHID.seeMoreParams"
+								v-on="controls.F_GOALS__MATCHES__MATCHID.handlers" />
+						</base-input-structure>
+					</q-col>
+					<q-col
+						v-if="controls.F_GOALS__PLAYERS__PLAYERID.isVisible"
+						cols="auto">
+						<base-input-structure
+							v-if="controls.F_GOALS__PLAYERS__PLAYERID.isVisible"
+							class="i-text"
+							v-bind="controls.F_GOALS__PLAYERS__PLAYERID"
+							v-on="controls.F_GOALS__PLAYERS__PLAYERID.handlers"
+							:loading="controls.F_GOALS__PLAYERS__PLAYERID.props.loading"
+							:reporting-mode-on="reportingModeCAV"
+							:suggestion-mode-on="suggestionModeOn">
+							<q-lookup
+								v-if="controls.F_GOALS__PLAYERS__PLAYERID.isVisible"
+								v-bind="controls.F_GOALS__PLAYERS__PLAYERID.props"
+								v-on="controls.F_GOALS__PLAYERS__PLAYERID.handlers" />
+							<q-see-more-f-goals-players-playerid
+								v-if="controls.F_GOALS__PLAYERS__PLAYERID.seeMoreIsVisible"
+								v-bind="controls.F_GOALS__PLAYERS__PLAYERID.seeMoreParams"
+								v-on="controls.F_GOALS__PLAYERS__PLAYERID.handlers" />
+						</base-input-structure>
+					</q-col>
+					<q-col
+						v-if="controls.F_GOALS_GOALSMINUTE__.isVisible"
+						cols="auto">
+						<base-input-structure
+							v-if="controls.F_GOALS_GOALSMINUTE__.isVisible"
+							class="i-text"
+							v-bind="controls.F_GOALS_GOALSMINUTE__"
+							v-on="controls.F_GOALS_GOALSMINUTE__.handlers"
+							:loading="controls.F_GOALS_GOALSMINUTE__.props.loading"
+							:reporting-mode-on="reportingModeCAV"
+							:suggestion-mode-on="suggestionModeOn">
+							<q-numeric-input
+								v-if="controls.F_GOALS_GOALSMINUTE__.isVisible"
+								v-bind="controls.F_GOALS_GOALSMINUTE__.props"
+								@update:model-value="model.ValMinute.fnUpdateValue" />
+						</base-input-structure>
+					</q-col>
+				</q-row>
 			</template>
 		</q-container>
 	</teleport>

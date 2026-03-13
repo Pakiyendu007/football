@@ -96,6 +96,120 @@
 			data-key="F_MATCHES"
 			:data-loading="!formInitialDataLoaded || !isActiveForm">
 			<template v-if="formControl.initialized && showFormBody">
+				<q-row v-if="controls.F_MATCHES__MATCHES__MATCHID.isVisible || controls.F_MATCHES__AWAYTEAM__TEAMID.isVisible || controls.F_MATCHES__MATCHES__MATCHDATE.isVisible || controls.F_MATCHES__MATCHES__HOMEGOALS.isVisible || controls.F_MATCHES__MATCHES__AWAYGOALS.isVisible || controls.F_MATCHES__TEAM__TEAMID.isVisible">
+					<q-col
+						v-if="controls.F_MATCHES__MATCHES__MATCHID.isVisible"
+						cols="auto">
+						<base-input-structure
+							v-if="controls.F_MATCHES__MATCHES__MATCHID.isVisible"
+							class="i-text"
+							v-bind="controls.F_MATCHES__MATCHES__MATCHID"
+							v-on="controls.F_MATCHES__MATCHES__MATCHID.handlers"
+							:loading="controls.F_MATCHES__MATCHES__MATCHID.props.loading"
+							:reporting-mode-on="reportingModeCAV"
+							:suggestion-mode-on="suggestionModeOn">
+							<q-numeric-input
+								v-if="controls.F_MATCHES__MATCHES__MATCHID.isVisible"
+								v-bind="controls.F_MATCHES__MATCHES__MATCHID.props"
+								@update:model-value="model.ValMatchid.fnUpdateValue" />
+						</base-input-structure>
+					</q-col>
+					<q-col
+						v-if="controls.F_MATCHES__AWAYTEAM__TEAMID.isVisible"
+						cols="auto">
+						<base-input-structure
+							v-if="controls.F_MATCHES__AWAYTEAM__TEAMID.isVisible"
+							class="i-text"
+							v-bind="controls.F_MATCHES__AWAYTEAM__TEAMID"
+							v-on="controls.F_MATCHES__AWAYTEAM__TEAMID.handlers"
+							:loading="controls.F_MATCHES__AWAYTEAM__TEAMID.props.loading"
+							:reporting-mode-on="reportingModeCAV"
+							:suggestion-mode-on="suggestionModeOn">
+							<q-lookup
+								v-if="controls.F_MATCHES__AWAYTEAM__TEAMID.isVisible"
+								v-bind="controls.F_MATCHES__AWAYTEAM__TEAMID.props"
+								v-on="controls.F_MATCHES__AWAYTEAM__TEAMID.handlers" />
+							<q-see-more-f-matches-awayteam-teamid
+								v-if="controls.F_MATCHES__AWAYTEAM__TEAMID.seeMoreIsVisible"
+								v-bind="controls.F_MATCHES__AWAYTEAM__TEAMID.seeMoreParams"
+								v-on="controls.F_MATCHES__AWAYTEAM__TEAMID.handlers" />
+						</base-input-structure>
+					</q-col>
+					<q-col
+						v-if="controls.F_MATCHES__MATCHES__MATCHDATE.isVisible"
+						cols="auto">
+						<base-input-structure
+							v-if="controls.F_MATCHES__MATCHES__MATCHDATE.isVisible"
+							class="i-text"
+							v-bind="controls.F_MATCHES__MATCHES__MATCHDATE"
+							v-on="controls.F_MATCHES__MATCHES__MATCHDATE.handlers"
+							:loading="controls.F_MATCHES__MATCHES__MATCHDATE.props.loading"
+							:reporting-mode-on="reportingModeCAV"
+							:suggestion-mode-on="suggestionModeOn">
+							<q-date-time-picker
+								v-if="controls.F_MATCHES__MATCHES__MATCHDATE.isVisible"
+								v-bind="controls.F_MATCHES__MATCHES__MATCHDATE.props"
+								:model-value="model.ValMatchdate.value"
+								@reset-icon-click="model.ValMatchdate.fnUpdateValue(model.ValMatchdate.originalValue ?? new Date())"
+								@update:model-value="model.ValMatchdate.fnUpdateValue($event ?? '')" />
+						</base-input-structure>
+					</q-col>
+					<q-col
+						v-if="controls.F_MATCHES__MATCHES__HOMEGOALS.isVisible"
+						cols="auto">
+						<base-input-structure
+							v-if="controls.F_MATCHES__MATCHES__HOMEGOALS.isVisible"
+							class="i-text"
+							v-bind="controls.F_MATCHES__MATCHES__HOMEGOALS"
+							v-on="controls.F_MATCHES__MATCHES__HOMEGOALS.handlers"
+							:loading="controls.F_MATCHES__MATCHES__HOMEGOALS.props.loading"
+							:reporting-mode-on="reportingModeCAV"
+							:suggestion-mode-on="suggestionModeOn">
+							<q-numeric-input
+								v-if="controls.F_MATCHES__MATCHES__HOMEGOALS.isVisible"
+								v-bind="controls.F_MATCHES__MATCHES__HOMEGOALS.props"
+								@update:model-value="model.ValHomegoals.fnUpdateValue" />
+						</base-input-structure>
+					</q-col>
+					<q-col
+						v-if="controls.F_MATCHES__MATCHES__AWAYGOALS.isVisible"
+						cols="auto">
+						<base-input-structure
+							v-if="controls.F_MATCHES__MATCHES__AWAYGOALS.isVisible"
+							class="i-text"
+							v-bind="controls.F_MATCHES__MATCHES__AWAYGOALS"
+							v-on="controls.F_MATCHES__MATCHES__AWAYGOALS.handlers"
+							:loading="controls.F_MATCHES__MATCHES__AWAYGOALS.props.loading"
+							:reporting-mode-on="reportingModeCAV"
+							:suggestion-mode-on="suggestionModeOn">
+							<q-numeric-input
+								v-if="controls.F_MATCHES__MATCHES__AWAYGOALS.isVisible"
+								v-bind="controls.F_MATCHES__MATCHES__AWAYGOALS.props"
+								@update:model-value="model.ValAwaygoals.fnUpdateValue" />
+						</base-input-structure>
+					</q-col>
+					<q-col
+						v-if="controls.F_MATCHES__TEAM__TEAMID.isVisible"
+						cols="auto">
+						<base-input-structure
+							v-if="controls.F_MATCHES__TEAM__TEAMID.isVisible"
+							class="i-text"
+							v-bind="controls.F_MATCHES__TEAM__TEAMID"
+							v-on="controls.F_MATCHES__TEAM__TEAMID.handlers"
+							:loading="controls.F_MATCHES__TEAM__TEAMID.props.loading"
+							:reporting-mode-on="reportingModeCAV"
+							:suggestion-mode-on="suggestionModeOn">
+							<q-lookup
+								v-if="controls.F_MATCHES__TEAM__TEAMID.isVisible"
+								v-bind="controls.F_MATCHES__TEAM__TEAMID.props"
+								v-on="controls.F_MATCHES__TEAM__TEAMID.handlers" />
+							<q-see-more-f-matches-team-teamid
+								v-if="controls.F_MATCHES__TEAM__TEAMID.seeMoreIsVisible"
+								v-bind="controls.F_MATCHES__TEAM__TEAMID.seeMoreParams"
+								v-on="controls.F_MATCHES__TEAM__TEAMID.handlers" />
+						</base-input-structure>
+					</q-col>
+				</q-row>
 			</template>
 		</q-container>
 	</teleport>

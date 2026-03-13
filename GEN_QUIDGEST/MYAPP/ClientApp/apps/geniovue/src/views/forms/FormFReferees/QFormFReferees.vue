@@ -96,6 +96,93 @@
 			data-key="F_REFEREES"
 			:data-loading="!formInitialDataLoaded || !isActiveForm">
 			<template v-if="formControl.initialized && showFormBody">
+				<q-row v-if="controls.F_REFEREES__REFEREES__REFEREEID.isVisible || controls.F_REFEREES__REFEREES__REFEREENAME.isVisible || controls.F_REFEREES__REFEREES__AGE.isVisible || controls.F_REFEREES__REFEREES__NATIONALITY.isVisible || controls.F_REFEREES__REFEREES__EXPERIENCEYEARS.isVisible">
+					<q-col
+						v-if="controls.F_REFEREES__REFEREES__REFEREEID.isVisible"
+						cols="auto">
+						<base-input-structure
+							v-if="controls.F_REFEREES__REFEREES__REFEREEID.isVisible"
+							class="i-text"
+							v-bind="controls.F_REFEREES__REFEREES__REFEREEID"
+							v-on="controls.F_REFEREES__REFEREES__REFEREEID.handlers"
+							:loading="controls.F_REFEREES__REFEREES__REFEREEID.props.loading"
+							:reporting-mode-on="reportingModeCAV"
+							:suggestion-mode-on="suggestionModeOn">
+							<q-numeric-input
+								v-if="controls.F_REFEREES__REFEREES__REFEREEID.isVisible"
+								v-bind="controls.F_REFEREES__REFEREES__REFEREEID.props"
+								@update:model-value="model.ValRefereeid.fnUpdateValue" />
+						</base-input-structure>
+					</q-col>
+					<q-col
+						v-if="controls.F_REFEREES__REFEREES__REFEREENAME.isVisible"
+						cols="auto">
+						<base-input-structure
+							v-if="controls.F_REFEREES__REFEREES__REFEREENAME.isVisible"
+							class="i-text"
+							v-bind="controls.F_REFEREES__REFEREES__REFEREENAME"
+							v-on="controls.F_REFEREES__REFEREES__REFEREENAME.handlers"
+							:loading="controls.F_REFEREES__REFEREES__REFEREENAME.props.loading"
+							:reporting-mode-on="reportingModeCAV"
+							:suggestion-mode-on="suggestionModeOn">
+							<q-text-field
+								v-bind="controls.F_REFEREES__REFEREES__REFEREENAME.props"
+								@blur="onBlur(controls.F_REFEREES__REFEREES__REFEREENAME, model.ValRefereename.value)"
+								@change="model.ValRefereename.fnUpdateValueOnChange" />
+						</base-input-structure>
+					</q-col>
+					<q-col
+						v-if="controls.F_REFEREES__REFEREES__AGE.isVisible"
+						cols="auto">
+						<base-input-structure
+							v-if="controls.F_REFEREES__REFEREES__AGE.isVisible"
+							class="i-text"
+							v-bind="controls.F_REFEREES__REFEREES__AGE"
+							v-on="controls.F_REFEREES__REFEREES__AGE.handlers"
+							:loading="controls.F_REFEREES__REFEREES__AGE.props.loading"
+							:reporting-mode-on="reportingModeCAV"
+							:suggestion-mode-on="suggestionModeOn">
+							<q-numeric-input
+								v-if="controls.F_REFEREES__REFEREES__AGE.isVisible"
+								v-bind="controls.F_REFEREES__REFEREES__AGE.props"
+								@update:model-value="model.ValAge.fnUpdateValue" />
+						</base-input-structure>
+					</q-col>
+					<q-col
+						v-if="controls.F_REFEREES__REFEREES__NATIONALITY.isVisible"
+						cols="auto">
+						<base-input-structure
+							v-if="controls.F_REFEREES__REFEREES__NATIONALITY.isVisible"
+							class="i-text"
+							v-bind="controls.F_REFEREES__REFEREES__NATIONALITY"
+							v-on="controls.F_REFEREES__REFEREES__NATIONALITY.handlers"
+							:loading="controls.F_REFEREES__REFEREES__NATIONALITY.props.loading"
+							:reporting-mode-on="reportingModeCAV"
+							:suggestion-mode-on="suggestionModeOn">
+							<q-text-field
+								v-bind="controls.F_REFEREES__REFEREES__NATIONALITY.props"
+								@blur="onBlur(controls.F_REFEREES__REFEREES__NATIONALITY, model.ValNationality.value)"
+								@change="model.ValNationality.fnUpdateValueOnChange" />
+						</base-input-structure>
+					</q-col>
+					<q-col
+						v-if="controls.F_REFEREES__REFEREES__EXPERIENCEYEARS.isVisible"
+						cols="auto">
+						<base-input-structure
+							v-if="controls.F_REFEREES__REFEREES__EXPERIENCEYEARS.isVisible"
+							class="i-text"
+							v-bind="controls.F_REFEREES__REFEREES__EXPERIENCEYEARS"
+							v-on="controls.F_REFEREES__REFEREES__EXPERIENCEYEARS.handlers"
+							:loading="controls.F_REFEREES__REFEREES__EXPERIENCEYEARS.props.loading"
+							:reporting-mode-on="reportingModeCAV"
+							:suggestion-mode-on="suggestionModeOn">
+							<q-numeric-input
+								v-if="controls.F_REFEREES__REFEREES__EXPERIENCEYEARS.isVisible"
+								v-bind="controls.F_REFEREES__REFEREES__EXPERIENCEYEARS.props"
+								@update:model-value="model.ValExperienceyears.fnUpdateValue" />
+						</base-input-structure>
+					</q-col>
+				</q-row>
 			</template>
 		</q-container>
 	</teleport>

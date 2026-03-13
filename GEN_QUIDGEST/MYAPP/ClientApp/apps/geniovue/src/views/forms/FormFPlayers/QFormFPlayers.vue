@@ -96,6 +96,97 @@
 			data-key="F_PLAYERS"
 			:data-loading="!formInitialDataLoaded || !isActiveForm">
 			<template v-if="formControl.initialized && showFormBody">
+				<q-row v-if="controls.F_PLAYERS__PLAYERS__POSITION.isVisible || controls.F_PLAYERS__PLAYERS__PLAYERID.isVisible || controls.F_PLAYERS__PLAYERS__PLAYERNAME.isVisible || controls.F_PLAYERS__PLAYERS__AGE.isVisible || controls.F_PLAYERS__MATCHES__MATCHID.isVisible">
+					<q-col
+						v-if="controls.F_PLAYERS__PLAYERS__POSITION.isVisible"
+						cols="auto">
+						<base-input-structure
+							v-if="controls.F_PLAYERS__PLAYERS__POSITION.isVisible"
+							class="i-text"
+							v-bind="controls.F_PLAYERS__PLAYERS__POSITION"
+							v-on="controls.F_PLAYERS__PLAYERS__POSITION.handlers"
+							:loading="controls.F_PLAYERS__PLAYERS__POSITION.props.loading"
+							:reporting-mode-on="reportingModeCAV"
+							:suggestion-mode-on="suggestionModeOn">
+							<q-numeric-input
+								v-if="controls.F_PLAYERS__PLAYERS__POSITION.isVisible"
+								v-bind="controls.F_PLAYERS__PLAYERS__POSITION.props"
+								@update:model-value="model.ValPosition.fnUpdateValue" />
+						</base-input-structure>
+					</q-col>
+					<q-col
+						v-if="controls.F_PLAYERS__PLAYERS__PLAYERID.isVisible"
+						cols="auto">
+						<base-input-structure
+							v-if="controls.F_PLAYERS__PLAYERS__PLAYERID.isVisible"
+							class="i-text"
+							v-bind="controls.F_PLAYERS__PLAYERS__PLAYERID"
+							v-on="controls.F_PLAYERS__PLAYERS__PLAYERID.handlers"
+							:loading="controls.F_PLAYERS__PLAYERS__PLAYERID.props.loading"
+							:reporting-mode-on="reportingModeCAV"
+							:suggestion-mode-on="suggestionModeOn">
+							<q-numeric-input
+								v-if="controls.F_PLAYERS__PLAYERS__PLAYERID.isVisible"
+								v-bind="controls.F_PLAYERS__PLAYERS__PLAYERID.props"
+								@update:model-value="model.ValPlayerid.fnUpdateValue" />
+						</base-input-structure>
+					</q-col>
+					<q-col
+						v-if="controls.F_PLAYERS__PLAYERS__PLAYERNAME.isVisible"
+						cols="auto">
+						<base-input-structure
+							v-if="controls.F_PLAYERS__PLAYERS__PLAYERNAME.isVisible"
+							class="i-text"
+							v-bind="controls.F_PLAYERS__PLAYERS__PLAYERNAME"
+							v-on="controls.F_PLAYERS__PLAYERS__PLAYERNAME.handlers"
+							:loading="controls.F_PLAYERS__PLAYERS__PLAYERNAME.props.loading"
+							:reporting-mode-on="reportingModeCAV"
+							:suggestion-mode-on="suggestionModeOn">
+							<q-text-field
+								v-bind="controls.F_PLAYERS__PLAYERS__PLAYERNAME.props"
+								@blur="onBlur(controls.F_PLAYERS__PLAYERS__PLAYERNAME, model.ValPlayername.value)"
+								@change="model.ValPlayername.fnUpdateValueOnChange" />
+						</base-input-structure>
+					</q-col>
+					<q-col
+						v-if="controls.F_PLAYERS__PLAYERS__AGE.isVisible"
+						cols="auto">
+						<base-input-structure
+							v-if="controls.F_PLAYERS__PLAYERS__AGE.isVisible"
+							class="i-text"
+							v-bind="controls.F_PLAYERS__PLAYERS__AGE"
+							v-on="controls.F_PLAYERS__PLAYERS__AGE.handlers"
+							:loading="controls.F_PLAYERS__PLAYERS__AGE.props.loading"
+							:reporting-mode-on="reportingModeCAV"
+							:suggestion-mode-on="suggestionModeOn">
+							<q-numeric-input
+								v-if="controls.F_PLAYERS__PLAYERS__AGE.isVisible"
+								v-bind="controls.F_PLAYERS__PLAYERS__AGE.props"
+								@update:model-value="model.ValAge.fnUpdateValue" />
+						</base-input-structure>
+					</q-col>
+					<q-col
+						v-if="controls.F_PLAYERS__MATCHES__MATCHID.isVisible"
+						cols="auto">
+						<base-input-structure
+							v-if="controls.F_PLAYERS__MATCHES__MATCHID.isVisible"
+							class="i-text"
+							v-bind="controls.F_PLAYERS__MATCHES__MATCHID"
+							v-on="controls.F_PLAYERS__MATCHES__MATCHID.handlers"
+							:loading="controls.F_PLAYERS__MATCHES__MATCHID.props.loading"
+							:reporting-mode-on="reportingModeCAV"
+							:suggestion-mode-on="suggestionModeOn">
+							<q-lookup
+								v-if="controls.F_PLAYERS__MATCHES__MATCHID.isVisible"
+								v-bind="controls.F_PLAYERS__MATCHES__MATCHID.props"
+								v-on="controls.F_PLAYERS__MATCHES__MATCHID.handlers" />
+							<q-see-more-f-players-matches-matchid
+								v-if="controls.F_PLAYERS__MATCHES__MATCHID.seeMoreIsVisible"
+								v-bind="controls.F_PLAYERS__MATCHES__MATCHID.seeMoreParams"
+								v-on="controls.F_PLAYERS__MATCHES__MATCHID.handlers" />
+						</base-input-structure>
+					</q-col>
+				</q-row>
 			</template>
 		</q-container>
 	</teleport>
